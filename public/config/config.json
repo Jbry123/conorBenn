@@ -6,13 +6,13 @@
     "SYMBOL": "ETH",
     "ID": 1
   },
-  "NFT_NAME": "RDB Car Club",
-  "SYMBOL": "RDBCC",
-  "MAX_SUPPLY": 5000,
+  "NFT_NAME": "BenNFT",
+  "SYMBOL": "BNFT",
+  "MAX_SUPPLY": 5555,
   "WEI_COST": 150000000000000000,
   "DISPLAY_COST": 0.15,
   "GAS_LIMIT": 120000,
   "MARKETPLACE": "Opensea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/rdb-official",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/BenNFT-official",
   "SHOW_BACKGROUND": true
 }
