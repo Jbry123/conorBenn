@@ -14,6 +14,15 @@ import robe from "./styles/robe.png";
 import plotter from "./styles/plotter.png";
 import press from "./styles/lectern.png";
 import sessions from "./styles/sand-bag.png";
+import { Collapse } from 'antd';
+
+const { Panel } = Collapse;
+
+const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
 
 
 const truncate = (input, len) =>
@@ -300,7 +309,7 @@ function App() {
 
                 </div>
               </div>
-              <div className="heroSubText">
+              <div className="heroSubText" style={{marginTop: "5px"}}>
                 <p>NFT Brand With Massive Utility</p>
               </div>
             </div>
@@ -314,7 +323,7 @@ function App() {
                 </div>
               </div>
               <div className="heroSubText2">
-                <p style={{textShadow: "0px 1px 15px #000"}}>Launched to give back to his loyal fans, allow them to own a part of his legacy and gain access to exclusive and unrivaled utility.
+                <p style={{ textShadow: "0px 1px 15px #000" }}>Launched to give back to his loyal fans, allow them to own a part of his legacy and gain access to exclusive and unrivaled utility.
                   BenNFT is a 3D NFT project launching its initial collection with 5,555 NFTs. Being a part of BenNFT means getting access to a community of boxing fans, AMAs with industry insiders, AMAs with Conor, the opportunity to win fight memorabilia, and more.
                   What sets this apart from other boxing or athlete-related projects? Conor is building this to be an unprecedented Web3 brand and bringing you along for the ride.</p>
               </div>
@@ -338,14 +347,26 @@ function App() {
             <div className="item" id="item5">
 
               <div className="heroHeader" >
-                <h1 style={{ textAlign: "center" }}>FAQ:</h1>
+                <h1 style={{ textAlign: "center", marginBottom: "25px" }}>FAQ:</h1>
                 <div className="blueStripe1" style={{ backgroundPosition: "top top" }}>
 
                 </div>
               </div>
-              <div className="heroSubText">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</p>
+              <button class="accordion">Section 1</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
               </div>
+
+              <button class="accordion">Section 2</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+
+              <button class="accordion">Section 3</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+
             </div>
             {/* ///// item separater*/}
             <div className="item" id="item4">
