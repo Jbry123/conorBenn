@@ -57,8 +57,8 @@ export const StyledRoundButton = styled.button`
   font-weight: bold;
   font-size: 15px;
   color: var(--primary-text);
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -242,10 +242,10 @@ function App() {
       <div className="navContainer">
         <div className="nav-header-hide">
           <div className="logocontainer">
-            <h1 class="ml14">
-              <span class="text-wrapper">
-                <span class="letters">BenNFT</span>
-                <span class="line"></span>
+            <h1 className="ml14">
+              <span className="text-wrapper">
+                <span className="letters">BenNFT</span>
+                <span className="line"></span>
               </span>
             </h1>
           </div>
@@ -258,10 +258,10 @@ function App() {
               <a href="#item2">Utility</a>
             </div>
             <div className="site-link1">
-              <a href="#item3">Mint Now</a>
+              <a href="#item3">FAQ</a>
             </div>
             <div className="site-link1">
-              <a href="#item4">FAQ</a>
+              <a href="#item4">Mint</a>
             </div>
           </div>
           <div className="socials">
@@ -293,86 +293,176 @@ function App() {
 
 
       {/*-------------------------ABSOLUTE OBJECTS ABOVE---------------------------- */}
-
-      <section className="blank" style={{ background: "transparent" }}>
-      </section>
-
-      <section className="horizontal">
-        <div className="pin-wrap">
-          <div className="animation-wrap to-right">
-
-            <div className="item item1 ">
-
-              <div className="heroHeader">
-                <h1 style={{ textAlign: "center" }}>-Undeafeated Pro Boxer-<br />Conor Benn</h1>
-                <div className="blueStripe1">
-
-                </div>
-              </div>
-              <div className="heroSubText" style={{marginTop: "5px"}}>
-                <p>NFT Brand With Massive Utility</p>
-              </div>
-            </div>
-
-            <div className="item" id="item2">
-
-              <div className="heroHeader2" >
-                <h1 style={{ textAlign: "left" }}>What is BenNFT?</h1>
-                <div className="blueStripe2" style={{ backgroundPosition: "top top" }}>
-
-                </div>
-              </div>
-              <div className="heroSubText2">
-                <p style={{ textShadow: "0px 1px 15px #000" }}>Launched to give back to his loyal fans, allow them to own a part of his legacy and gain access to exclusive and unrivaled utility.
-                  BenNFT is a 3D NFT project launching its initial collection with 5,555 NFTs. Being a part of BenNFT means getting access to a community of boxing fans, AMAs with industry insiders, AMAs with Conor, the opportunity to win fight memorabilia, and more.
-                  What sets this apart from other boxing or athlete-related projects? Conor is building this to be an unprecedented Web3 brand and bringing you along for the ride.</p>
-              </div>
-            </div>
+      <div className="item1" id="item1">
+        <div className="heroHeader">
+          <h1 style={{ textAlign: "center" }}>Build a Legacy With<br />Conor Benn</h1>
+          <div className="blueStripe1">
 
           </div>
         </div>
-      </section>
+        <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.2rem", width: "75%" }}>
+          <p>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
+        </div>
+      </div>
+      <div id="item2">
+        <div className="heroHeader2" >
+          <h1 style={{ textAlign: "left" }}>What is BenNFT?</h1>
+          {/* <div className="blueStripe2" style={{ backgroundPosition: "top top" }}>
 
-
-      <section className="blank">
-      </section>
-
-
-
-      <section className="horizontal">
-        <div className="pin-wrap">
-          <div className="animation-wrap to-left">
-
-            {/* ///// item separater*/}
-            <div className="item" id="item5">
-
-              <div className="heroHeader" >
-                <h1 style={{ textAlign: "center", marginBottom: "25px" }}>FAQ:</h1>
-                <div className="blueStripe1" style={{ backgroundPosition: "top top" }}>
-
+          </div> */}
+        </div>
+        <div >
+          <p className="heroSubText2" style={{ textShadow: "0px 1px 15px #000", fontFamily: "Roboto", lineHeight: "1.5" }}>
+            BenNFT is a 3D NFT project by undefeated professional boxer Conor Benn. Giving back to
+            Conor’s fans, BenNFT grants holders exclusive access to his career and allows them to build a
+            legacy alongside The Destroyer himself.
+            BenNFT is a collection of 5,555 NFTs that utilises the technology to give you unmatched
+            opportunities and benefits, including but not limited to: Fight Tickets, Press Conference Access,
+            Meet & Greets, Live Training Sessions, Signed Memorabilia, 1-on-1 Calls, Virtual Hangouts, and
+            Behind-The-Scenes access to Conor’s life.
+          </p>
+        </div>
+      </div>
+      <div id="item3">
+        <div className="cardgrid_container">
+          <h1 className="heroHeader" style={{ textAlign: "center", fontSize: "2.2rem", margin: "50px 25px" }}>Connecting Conor To His Fans </h1>
+          {/* <p className="heroSubText" style={{ textAlign: "center", fontSize: "1.2rem", margin: "17.5px 25px" }}>-Exclusive access to his career-</p> */}
+          <ul className="cards">
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={ticket} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Fight Tickets</h2>
+                  <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
                 </div>
               </div>
-              <button class="accordion">Section 1</button>
-              <div class="panel">
-                <p>Lorem ipsum...</p>
+            </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={press} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Press Conference Access</h2>
+                  <p className="card_text">Exclusive access to upcoming fight press conferences. </p>
+                </div>
               </div>
-
-              <button class="accordion">Section 2</button>
-              <div class="panel">
-                <p>Lorem ipsum...</p>
+            </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={shake} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Meet & Greet</h2>
+                  <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
+                </div>
               </div>
-
-              <button class="accordion">Section 3</button>
-              <div class="panel">
-                <p>Lorem ipsum...</p>
+            </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={sessions} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Live Training Sessions</h2>
+                  <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
+                </div>
               </div>
+            </li>
+            
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={boxingShorts} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Signed Memorabilia</h2>
+                  <p className="card_text">Exclusive Merch only available to token holders</p>
+                </div>
+              </div>
+            </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={plotter} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">1-on-1 Calls</h2>
+                  <p className="card_text">50 prints up for grabs from the world famouse artits, The Connor Brothers</p>
+                </div>
+              </div>
+            </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={robe} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Virtual Hangouts</h2>
+                  <p className="card_text">1 lucky token holder will win Conor’s actual ring walk robe from an upcoming fight</p>
+                </div>
+              </div>
+            </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={boxingGloves} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Behind-The-Scenes Access to Conor's Life</h2>
+                  <p className="card_text">1 lucky token holder will win the gloves that Conor uses in his upcoming fight. </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-            </div>
-            {/* ///// item separater*/}
-            <div className="item" id="item4">
 
-              <div className="heroHeader" >
-                {/* <s.TextTitle
+        <div className="heroHeader" style={{ textAlign: "center", margin: "50px" }} >
+          <h1 style={{ textAlign: "center", margin: "50px" }}>FAQ:</h1>
+          <div className="blueStripe1" style={{ backgroundPosition: "top top" }}>
+
+          </div>
+        </div>
+        <div style={{ marginBottom: "50px" }} id="accordionContainer">
+          <button className="accordion">What are the benefits of holding a BenNFT?</button>
+          <div className="panel">
+            <p>BenNFTs grant you exclusive access to Conor and his legacy. These NFTs give you unmatched
+opportunities and benefits, including but not limited to: Fight Tickets, Press Conference Access,
+Meet & Greets, Live Training Sessions, Signed Memorabilia, 1-on-1 Calls, Virtual Hangouts, and
+Behind-The-Scenes access to Conor’s life.
+</p>
+          </div>
+
+          <button className="accordion">How much do they cost?</button>
+          <div className="panel">
+            <p>There are two pricing options for BenNFTs. Early Allow List (Presale) can purchase a
+BenNFT for £200 GBP and the Public Sale can purchase a BenNFT for £250 GBP.</p>
+          </div>
+
+          <button className="accordion"> What is the Allow List and how can I get on it?</button>
+          <div className="panel">
+            <p>The Allow List is to reward our early supporters of Conor and the project. The Allow List can
+purchase a BenNFT for 20% off (£200 GBP) and has a 3 hour purchase period before the
+Public Sale. <br />
+You can get on the Allow List by joining our Discord, engaging with the community, playing
+weekly games, and interacting with us on Twitter.
+
+</p>
+          </div>
+
+          <button className="accordion">Will each NFT be unique?</button>
+          <div className="panel">
+            <p>Yes, every single NFT will be unique with traits. There will also be rares and special 1/1 NFTs
+that will offer even more utility than the rest.</p>
+          </div>
+
+          <button className="accordion">How can I stay up to date?</button>
+          <div className="panel">
+            <p>Stay up to date with the latest news and announcements by joining our Discord and following us
+on Twitter.
+</p>
+          </div>
+
+          <button className="accordion">Where can I buy a BenNFT if I miss the sale?
+</button>
+          <div className="panel">
+            <p>BenNFTs will be available for purchase on a secondary market such as Opensea.</p>
+          </div>
+
+        </div>
+      </div>
+      <h1 className="heroHeader" style={{zIndex: "100", textAlign: "center"}}>Mint Now</h1>
+      <div id="item4">
+        <div className="heroHeader" >
+          {/* <s.TextTitle
                   style={{
                     textAlign: "center",
                     fontSize: 50,
@@ -384,36 +474,38 @@ function App() {
                   {data.totalSupply} / {CONFIG.MAX_SUPPLY}
                 </s.TextTitle> */}
 
-                <>
-                  <div className="supplyContainer">
-                    <div className="supplyLeft">
-                      Supply
-                    </div>
-                    <div className="supplyRight">
-                      {data.totalSupply} / {CONFIG.MAX_SUPPLY}
-                    </div>
-                  </div>
+          <>
+            <div className="supplyContainer">
+              
+              <div className="supplyLeft">
+                Supply
+              </div>
+              <div className="supplyRight">
+                {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+              </div>
+            </div>
 
-                  <div className="quantityContainer">
-                    <div className="quantityLeft">
-                      Price
-                    </div>
-                    <div className="quantityRight">
-                      $XXX
-                    </div>
-                  </div>
-                  {blockchain.account === "" ||
-                    blockchain.smartContract === null ? (
-                    <s.Container ai={"center"} jc={"center"}>
-                      <s.TextDescription
-                        style={{
-                          textAlign: "center",
-                          color: "var(--accent-text)",
-                        }}
-                      >
-                        Connect to the {CONFIG.NETWORK.NAME} network
-                      </s.TextDescription>
-                      {/* <StyledButton
+            <div className="quantityContainer">
+              <div className="quantityLeft">
+                Price
+              </div>
+              <div className="quantityRight">
+              £ 200 GBP
+              </div>
+            </div>
+            {blockchain.account === "" ||
+              blockchain.smartContract === null ? (
+              <s.Container ai={"center"} jc={"center"}>
+                <s.TextDescription
+                  style={{
+                    textAlign: "center",
+                    color: "var(--accent-text)",
+                    fontFamily: "Roboto"
+                  }}
+                >
+                  Connect to the {CONFIG.NETWORK.NAME} network
+                </s.TextDescription>
+                {/* <StyledButton
                         onClick={(e) => {
                           e.preventDefault();
                           dispatch(connect());
@@ -422,380 +514,281 @@ function App() {
                       >
                         CONNECT
                       </StyledButton> */}
-                      <s.TextDescription
-                        style={{
-                          textAlign: "center",
-                          color: "#fff",
-                          padding: "15px 40px",
-                          borderRadius: "30px",
-                          fontSize: "24px",
-                          fontWeight: "800",
-                          fontFamily: "Orbitron"
-                        }}
-                      >
-                        Quantity
-                      </s.TextDescription>
+                <s.TextDescription
+                  style={{
+                    textAlign: "center",
+                    color: "#ffffffed",
+                    padding: "15px 40px",
+                    borderRadius: "30px",
+                    fontSize: "24px",
+                    fontWeight: "800",
+                    fontFamily: "Orbitron"
+                  }}
+                >
+                  Quantity
+                </s.TextDescription>
 
-                      <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                <s.Container ai={"center"} jc={"center"} fd={"row"}>
 
-                        <StyledRoundButton
-                          style={{
-                            background: "#fff",
-                            color: "#000",
-                            fontSize: "40px",
-                            transform: "scale(1.5)",
-                            border: "none",
-                            fontWeight: "600",
-                          }}
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            decrementMintAmount();
-                          }}
-                        >
-                          -
-                        </StyledRoundButton>
-                        <s.SpacerMedium />
-                        <s.TextDescription
-                          style={{
-                            textAlign: "center",
-                            color: "#000",
-                            background: "#fff",
-                            padding: "0 40px",
-                            borderRadius: "30px",
-                            fontSize: "34px",
-                            fontWeight: "800",
-                          }}
-                        >
-                          {mintAmount}
-                        </s.TextDescription>
-                        <s.SpacerMedium />
-                        <StyledRoundButton
-                          style={{
-                            lineHeight: 0.4,
-                            background: "#fff",
-                            color: "#000",
-                            fontSize: "40px",
-                            transform: "scale(1.5)",
-                            border: "none",
-                            fontWeight: "600",
-                          }}
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            incrementMintAmount();
-                          }}
-                        >
-                          +
-                        </StyledRoundButton>
-                      </s.Container>
-                      <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                        <StyledButton id="buyButton1"
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            claimNFTs();
-                            getData();
-                          }}
-                        >
-                          {claimingNft ? "MINTING" : "Buy w/ Wallet"}
-                        </StyledButton>
+                  <StyledRoundButton
+                    style={{
+                      background: "#ffffffed",
+                      color: "#000",
+                      fontSize: "40px",
+                      transform: "scale(1.2)",
+                      border: "none",
+                      fontWeight: "600",
+                      padding: "0px 3px 3px 0px",
+                    }}
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      decrementMintAmount();
+                    }}
+                  >
+                    -
+                  </StyledRoundButton>
+                  <s.SpacerMedium />
+                  <s.TextDescription
+                    style={{
+                      textAlign: "center",
+                      color: "#000",
+                      background: "#ffffffed",
+                      padding: "0 40px",
+                      borderRadius: "30px",
+                      fontSize: "34px",
+                      fontWeight: "800",
+                    }}
+                  >
+                    {mintAmount}
+                  </s.TextDescription>
+                  <s.SpacerMedium />
+                  <StyledRoundButton
+                    style={{
+                      lineHeight: 0.4,
+                      background: "#ffffffed",
+                      color: "#000",
+                      fontSize: "40px",
+                      transform: "scale(1.2)",
+                      border: "none",
+                      fontWeight: "600",
+                    }}
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      incrementMintAmount();
+                    }}
+                  >
+                    +
+                  </StyledRoundButton>
+                </s.Container>
+                <s.Container ai={"center"} jc={"center"} fd={"row"} style={{ marginTop: "25px" }}>
+                  <StyledButton id="buyButton1"
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      claimNFTs();
+                      getData();
+                    }}
+                  >
+                    {claimingNft ? "MINTING" : "Buy w/ Wallet"}
+                  </StyledButton>
 
-                        <StyledButton id="buyButton2"
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            claimNFTs();
-                            getData();
-                          }}
-                        >
-                          {claimingNft ? "MINTING" : "Buy w/ Credit Card"}
-                        </StyledButton>
-                      </s.Container>
+                  <StyledButton id="buyButton2"
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      claimNFTs();
+                      getData();
+                    }}
+                  >
+                    {claimingNft ? "MINTING" : "Buy w/ Credit Card"}
+                  </StyledButton>
+                  <div className="heroSubText" style={{ marginTop: "30.5vh", padding: "10px 0px", position: "absolute" }}>
+                    <h1 style={{ textAlign: "center" }}> Ends In:</h1>
+                    <div id="countdown"></div>
+                  </div>
+                </s.Container>
 
-                      {blockchain.errorMsg !== "" ? (
-                        <>
-                          <s.TextDescription
-                            style={{
-                              textAlign: "center",
-                              color: "var(--accent-text)",
-                            }}
-                          >
-                            {blockchain.errorMsg}
-                          </s.TextDescription>
-                        </>
-                      ) : null}
-                    </s.Container>
-                  ) : (
-                    <>
 
-                      <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                        <StyledRoundButton
-                          style={{
-                            background: "#fff",
-                            color: "#000",
-                            fontSize: "40px",
-                            transform: "scale(1.5)",
-                            border: "none",
-                            fontWeight: "600",
-                          }}
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            decrementMintAmount();
-                          }}
-                        >
-                          -
-                        </StyledRoundButton>
-                        <s.SpacerMedium />
-                        <s.TextDescription
-                          style={{
-                            textAlign: "center",
-                            color: "#000",
-                            background: "#fff",
-                            padding: "0 40px",
-                            borderRadius: "30px",
-                            fontSize: "34px",
-                            fontWeight: "800",
-                          }}
-                        >
-                          {mintAmount}
-                        </s.TextDescription>
-                        <s.SpacerMedium />
-                        <StyledRoundButton
-                          style={{
-                            lineHeight: 0.4,
-                            background: "#fff",
-                            color: "#000",
-                            fontSize: "40px",
-                            transform: "scale(1.5)",
-                            border: "none",
-                            fontWeight: "600",
-                          }}
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            incrementMintAmount();
-                          }}
-                        >
-                          +
-                        </StyledRoundButton>
-                      </s.Container>
-                      <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                        <StyledButton id="buyButton1"
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            claimNFTs();
-                            getData();
-                          }}
-                        >
-                          {claimingNft ? "MINTING" : "Buy w/ Wallet"}
-                        </StyledButton>
+                {blockchain.errorMsg !== "" ? (
+                  <>
+                    <s.TextDescription
+                      style={{
+                        textAlign: "center",
+                        color: "var(--accent-text)",
+                      }}
+                    >
+                      {blockchain.errorMsg}
+                    </s.TextDescription>
+                  </>
+                ) : null}
+              </s.Container>
+            ) : (
+              <>
+<s.TextDescription
+                  style={{
+                    textAlign: "center",
+                    color: "#ffffffed",
+                    padding: "15px 40px",
+                    borderRadius: "30px",
+                    fontSize: "24px",
+                    fontWeight: "800",
+                    fontFamily: "Orbitron"
+                  }}
+                >
+                  Quantity
+                </s.TextDescription>
+                <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                  <StyledRoundButton
+                    style={{
+                      background: "#ffffffed",
+                      color: "#000",
+                      fontSize: "40px",
+                      transform: "scale(1.2)",
+                      border: "none",
+                      fontWeight: "600",
+                      padding: "0px 3px 3px 0px",
+                    }}
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      decrementMintAmount();
+                    }}
+                  >
+                    -
+                  </StyledRoundButton>
+                  <s.SpacerMedium />
+                  <s.TextDescription
+                    style={{
+                      textAlign: "center",
+                      color: "#000",
+                      background: "#ffffffed",
+                      padding: "0 40px",
+                      borderRadius: "30px",
+                      fontSize: "34px",
+                      fontWeight: "800",
+                    }}
+                  >
+                    {mintAmount}
+                  </s.TextDescription>
+                  <s.SpacerMedium />
+                  <StyledRoundButton
+                    style={{
+                      lineHeight: 0.4,
+                      background: "#ffffffed",
+                      color: "#000",
+                      fontSize: "40px",
+                      transform: "scale(1.2)",
+                      border: "none",
+                      fontWeight: "600",
+                    }}
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      incrementMintAmount();
+                    }}
+                  >
+                    +
+                  </StyledRoundButton>
+                </s.Container>
+                <s.Container ai={"center"} jc={"center"} fd={"row"} style={{ marginTop: "25px" }}>
+                  <StyledButton id="buyButton1"
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      claimNFTs();
+                      getData();
+                    }}
+                  >
+                    {claimingNft ? "MINTING" : "Buy w/ Wallet"}
+                  </StyledButton>
 
-                        <StyledButton id="buyButton2"
-                          disabled={claimingNft ? 1 : 0}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            claimNFTs();
-                            getData();
-                          }}
-                        >
-                          {claimingNft ? "MINTING" : "Buy w/ Credit Card"}
-                        </StyledButton>
-                      </s.Container>
-                    </>
-                  )}
-                </>
-              </div>
-              <div className="heroSubText" style={{ marginTop: "10.5vh", padding: "10px 0px" }}>
-                <h1 style={{ textAlign: "center" }}> Ends In:</h1>
-                <div id="countdown"></div>
-              </div>
+                  <StyledButton id="buyButton2"
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      claimNFTs();
+                      getData();
+                    }}
+                  >
+                    {claimingNft ? "MINTING" : "Buy w/ Credit Card"}
+                  </StyledButton>
+                  <div className="heroSubText" style={{ marginTop: "42.5vh", padding: "10px 0px", position: "absolute", opacity: "1" }}>
+                    <h1 style={{ textAlign: "center" }}> Ends In:</h1>
+                    <div id="countdown"></div>
+                  </div>
+
+                </s.Container>
+
+              </>
+            )}
+
+          </>
+
+        </div>
+
+
+      </div>
+      <footer className="site-footer" style={{ display: "flex", justifyContent: "center", background: "transparent", zIndex: "200", boxShadow: "0px -5px 60px 40px #000000ad", marginTop: "10vh" }}>
+
+        <div className="container" style={{ display: "flex", justifyContent: "center", width: "50%" }}>
+
+          <div className="row" style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "space-evenly", width: "100%" }}>
+            <div>
+            <h2 style={{ display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "space-evenly", width: "100%", fontSize: "40px", fontFamily: "Orbitron" }}>BenNFT</h2>
             </div>
 
-            {/* ///// item separater*/}
-            <div className="item" id="item3" style={{ paddingBottom: "5vh" }}>
-              <div className="cardgrid_container">
-                <h1 className="heroHeader">BenNFT Utilities Connect Conor Directly To His Fans!</h1>
-                <p className="heroSubText" style={{ textAlign: "center", fontSize: "1.2rem", margin: "17.5px 25px" }}>-Exclusive access to his career-</p>
-                <ul className="cards">
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={ticket} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Tickets to live fights</h2>
-                        <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={shake} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Meet & Greet</h2>
-                        <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={sessions} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Watch Training Sessions</h2>
-                        <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={press} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Press Conference Access</h2>
-                        <p className="card_text">Exclusive access to upcoming fight press conferences. </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={boxingShorts} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Exclusive Merch</h2>
-                        <p className="card_text">Exclusive merchandise only available to token holders</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={plotter} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Connor Brothers Prints</h2>
-                        <p className="card_text">50 prints up for grabs from the world famouse artits, The Connor Brothers</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={robe} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Conor’s Robe</h2>
-                        <p className="card_text">1 lucky token holder will win Conor’s actual ring walk robe from an upcoming fight</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="cards_item">
-                    <div className="card">
-                      <div className="card_image"><img src={boxingGloves} /></div>
-                      <div className="card_content">
-                        <h2 className="card_title">Conor’s Gloves</h2>
-                        <p className="card_text">1 lucky token holder will win the gloves that Conor uses in his upcoming fight. </p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              {/* <div className="heroHeader">
-                <h1 style={{ textAlign: "center" }}>-Undeafeated Pro Boxer-<br />Conor Benn</h1>
-                <div className="blueStripe1">
 
-                </div>
-              </div>
-              <div className="heroSubText">
-                <p>NFT Brand With Massive Utility</p>
-              </div> */}
+            <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+            <div className="col-xs-6 col-md-3" style={{ width: "100%", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", margin: "25px 0px"  }}>
+              <h6>Links</h6>
+              <ul className="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+              </ul>
             </div>
-            {/* ///// item separater */}
+
+            <div className="col-xs-6 col-md-3" style={{ width: "100%", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", margin: "25px 0px" }}>
+              <h6>Community</h6>
+              <ul className="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+</div>
           </div>
+
         </div>
-      </section>
 
+        <div className="container">
 
+          <div className="row">
 
-      <section className="blank">
-        <h1>...ScrollTrigger for the win...</h1>
-        <p>...</p>
-      </section>
+            <div className="col-sm-12 col-md-6">
+              <h6>Sign up for updates!</h6>
+            </div>
 
+            <div className="col-xs-6 col-md-3">
 
+            </div>
 
-      <section className="horizontal">
-        <div className="pin-wrap">
-          <div className="animation-wrap to-right">
-            <div className="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-            <div className="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
-            <div className="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
-            <div className="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
-            <div className="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
-            <div className="item">Rem nobis facere provident magni minima iste commodi aliquam harum? Facere error quos cumque perspiciatis voluptatibus deserunt maiores, fugiat sunt sit ab inventore natus saepe, eveniet alias ipsam placeat voluptas!</div>
-            <div className="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-            <div className="item">Magnam eveniet inventore assumenda ullam. At saepe voluptatibus sed dicta reiciendis, excepturi nisi perferendis, accusantium est suscipit tempora dolorum praesentium cupiditate doloribus non? Sint numquam recusandae dolore quis esse ea?</div>
-            <div className="item">Temporibus cum dolor minima consequatur esse veritatis enim nemo cupiditate laborum doloribus reiciendis perferendis, quas fugit earum rerum, at beatae alias amet aspernatur dolorem dolore error commodi. Perspiciatis, reiciendis amet!</div>
-            <div className="item">Vitae, tenetur beatae error corrupti odit expedita quisquam commodi ea aspernatur aliquid, eveniet reprehenderit sequi, similique maiores praesentium quam! Optio tenetur saepe unde voluptatem minus tempora maxime temporibus ducimus ullam!</div>
-
-          </div>
-        </div>
-      </section>
-
-
-      <section className="blank">
-        <h1>...keep scrollin' scrollin' scrollin' scrollin'...</h1>
-        <p>...</p>
-      </section>
-
-
-      <section className="horizontal">
-        <div className="pin-wrap">
-          <div className="animation-wrap to-left">
-            <div className="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-            <div className="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
-            <div className="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
-            <div className="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
-            <div className="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
-            <div className="item">Rem nobis facere provident magni minima iste commodi aliquam harum? Facere error quos cumque perspiciatis voluptatibus deserunt maiores, fugiat sunt sit ab inventore natus saepe, eveniet alias ipsam placeat voluptas!</div>
-            <div className="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-            <div className="item">Magnam eveniet inventore assumenda ullam. At saepe voluptatibus sed dicta reiciendis, excepturi nisi perferendis, accusantium est suscipit tempora dolorum praesentium cupiditate doloribus non? Sint numquam recusandae dolore quis esse ea?</div>
-            <div className="item">Temporibus cum dolor minima consequatur esse veritatis enim nemo cupiditate laborum doloribus reiciendis perferendis, quas fugit earum rerum, at beatae alias amet aspernatur dolorem dolore error commodi. Perspiciatis, reiciendis amet!</div>
-            <div className="item">Vitae, tenetur beatae error corrupti odit expedita quisquam commodi ea aspernatur aliquid, eveniet reprehenderit sequi, similique maiores praesentium quam! Optio tenetur saepe unde voluptatem minus tempora maxime temporibus ducimus ullam!</div>
+            <div className="col-xs-6 col-md-3">
+              <div class="ml-embedded" data-form="kTbFbe"></div>
+            </div>
 
           </div>
+
         </div>
-      </section>
 
-      <section className="blank">
-        <h1>...lorem ipsum...</h1>
-        <p>...</p>
-      </section>
-
-      <section className="horizontal">
-        <div className="pin-wrap">
-          <div className="animation-wrap to-left">
-            <div className="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-            <div className="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
-            <div className="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
-            <div className="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
-            <div className="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
-            <div className="item">Rem nobis facere provident magni minima iste commodi aliquam harum? Facere error quos cumque perspiciatis voluptatibus deserunt maiores, fugiat sunt sit ab inventore natus saepe, eveniet alias ipsam placeat voluptas!</div>
-            <div className="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-            <div className="item">Magnam eveniet inventore assumenda ullam. At saepe voluptatibus sed dicta reiciendis, excepturi nisi perferendis, accusantium est suscipit tempora dolorum praesentium cupiditate doloribus non? Sint numquam recusandae dolore quis esse ea?</div>
-            <div className="item">Temporibus cum dolor minima consequatur esse veritatis enim nemo cupiditate laborum doloribus reiciendis perferendis, quas fugit earum rerum, at beatae alias amet aspernatur dolorem dolore error commodi. Perspiciatis, reiciendis amet!</div>
-            <div className="item">Vitae, tenetur beatae error corrupti odit expedita quisquam commodi ea aspernatur aliquid, eveniet reprehenderit sequi, similique maiores praesentium quam! Optio tenetur saepe unde voluptatem minus tempora maxime temporibus ducimus ullam!</div>
-
-          </div>
-        </div>
-      </section>
-
-
-
-
-      <section className="blank">
-        <h1>...what do you think?</h1>
-        <p>...</p>
-      </section>
-
-
-
-
-
+      </footer>
 
     </s.Screen>
   );

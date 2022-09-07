@@ -181,9 +181,9 @@ section:nth-of-type(even) {
   line-height: 78px;
   font-size: 17px;
   font-family: Orbitron, sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #CC0000 5%);
+  background: linear-gradient(45deg, transparent 5%, #464646ad 5%);
   border: 0;
-  color: #fff;
+  color: #ffffffed;
   letter-spacing: 3px;
   box-shadow: 6px 0px 0px #00058E;
   outline: transparent;
@@ -429,55 +429,92 @@ section:nth-of-type(even) {
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: rgba(175, 175, 175, 0.5);
+  color: #ffffffed;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
-  border: none;
+  font-family:  Roboto;
+  font-size: 1.5rem;
+  border: solid .62px #ffffff99;
   outline: none;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #cc00008e;
+}
+
+#accordionContainer {
+  width: 70vw;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: #ffffffc0;
   max-height: 0;
+  width: 100%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
+.panel p {
+  font-family: Roboto;
+  padding: 20px 40px;
+  line-height: 1.1;
+}
+
 .item1 {
+  width: 100vw;
+  height: 100vh;
   background: url("./home.png") no-repeat top right;
   animation: all 11.8s;
   background-size: 290vw;
+  padding: 130px 140px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  border: solid 15px #000;
+  flex-direction: column;
+  border: solid 2px #000;
+  z-index: 20;
   box-shadow: inset -19px -2px 63px 20px #000, 20px 0px 15px 13px #000;
 }
 
+button {
+  transition: all .8s;
+}
+
+button:hover {
+  transition: all .8s;
+  filter: grayscale(1);
+}
+
 #item2 {
-  background: url("./other-bg.png") no-repeat top right;
+  width: 100vw;
+  height: 100vh;
+  background: url("./Group\ 748.png") no-repeat center bottom, url("./other-bg.png") no-repeat center center ;
   animation: all 11.8s;
-  background-size: 290%;
+  background-size: 112%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 15px #000;
-  box-shadow: inset 19px -2px 63px 20px #000, -20px 0px 60px 19px #000;
-  z-index: 1222 !important;
+  flex-direction: column;
+  z-index: 13;
+  box-shadow: 2px 4px 23px 2px #87241d;
 }
 
 #item3 {
-  background: linear-gradient(90deg, #000 30%, rgb(44, 44, 44) 100%);
+  padding: 80px 55px !important;
+  width: 100vw;
+  height: 200vh;
+  min-height: 2000px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to top, #000 30%, rgb(26, 26, 26) 100%);
   background-size: 100%;
   display: flex;
   justify-content: center;
@@ -485,13 +522,187 @@ section:nth-of-type(even) {
 }
 
 #item4 {
-  padding-bottom: 50px;
-  background: url("./mintHero.png") left center no-repeat, url("./smokebg.png") bottom center no-repeat;
-  background-size: 100%;
+  height: 95vh;
+  padding: 210px 125px;
+  box-shadow: inset 19px -2px 63px 20px #000, 0px -20px 60px 19px #000;
+  background: url("./mintHero.png") center bottom no-repeat;
+  background-size: cover !important;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  mask-image: linear-gradient(to left, transparent 5%, black 25%, black 94%, transparent 100%);
+  z-index: 80;
+  mask-image: linear-gradient(360deg, transparent 2%, black 25%, black 92%, transparent 100%), linear-gradient(to top, transparent 5%, transparent 92%);
+}
+
+
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#CC0000
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
 }
 
 #buyButton1 {
@@ -500,7 +711,7 @@ section:nth-of-type(even) {
   box-shadow: none;
   width: 225px;
   height: 52px;
-  box-shadow: 0px 3px 15px 1px #CC0000;
+  box-shadow: 0px 0px 3px 0.5px hsla(0, 100%, 20%, 0.842);
   padding: 10px 5px;
   font-size: 13px;
   font-family: Orbitron;
@@ -512,7 +723,7 @@ section:nth-of-type(even) {
   box-shadow: none;
   width: 225px;
   height: 52px;
-  box-shadow: 0px 3px 15px 1px #0000cc;
+  box-shadow: 0px 0px 3px 1px hsla(240, 94%, 20%, 0.938);
   padding: 10px 5px;
   font-size: 13px;
   font-family: Orbitron;
@@ -539,7 +750,7 @@ section:nth-of-type(even) {
 
 .supplyContainer .supplyRight {
   background: #000;
-  color: #fff;
+  color: #ffffffad;
   width: 16vw;
   display: flex;
   justify-content: center;
@@ -569,7 +780,7 @@ section:nth-of-type(even) {
 
 .quantityContainer .quantityRight {
   background: #000;
-  color: #fff;
+  color: #ffffffad;
   width: 16vw;
   display: flex;
   justify-content: center;
@@ -578,6 +789,7 @@ section:nth-of-type(even) {
 
 
 .countdownContainer {
+  z-index: 200;
   margin-top: 1vh;
 }
 
@@ -594,6 +806,7 @@ section:nth-of-type(even) {
 }
 
 .cardgrid_container img {
+  filter: grayscale(1);
   height: auto;
   max-height: 100px;
   max-width: 100%;
@@ -712,17 +925,16 @@ section:nth-of-type(even) {
   font-family: Orbitron;
   opacity: 1;
   text-align: left;
-  width: 65vw;
-  margin: 20px 100px;
+  width: 60vw;
 }
 
 .blueStripe1 {
   background: url("./goldBar.png") no-repeat left bottom;
   width: 78vw;
-  height: 40px;
+  height: 28px;
   position: absolute;
   bottom: 0;
-  z-index: 1299;
+  z-index: 20;
   background-size: contain;
   left: 0;
 }
@@ -733,7 +945,7 @@ section:nth-of-type(even) {
   height: 49vh;
   position: absolute;
   bottom: 0;
-  z-index: 1299;
+  z-index: 20;
   background-size: contain;
   left: 0;
 }
@@ -748,12 +960,12 @@ section:nth-of-type(even) {
 
 .heroSubText2 {
   padding-right: 15vw;
-  margin: 20px 100px;
+  margin: 20px 50px;
   color: white;
   font-family: Orbitron;
   font-size: 18px;
   opacity: 1;
-  width: 63vw;
+  width: 60vw;
   
 }
 
@@ -789,6 +1001,11 @@ section:nth-of-type(even) {
 
 .site-link1 {
   padding: 10px;
+  text-decoration: none;
+}
+
+.site-link1 a {
+  text-decoration: none;
 }
 
 .social-link1 a,
@@ -814,7 +1031,7 @@ section:nth-of-type(even) {
   margin: 10px;
   width: 48px;
   height: 48px;
-  background: url("./discordColor.png") no-repeat center center;
+  background: url("./discordWhite.webp") no-repeat center center;
   background-size: cover;
 }
 
@@ -826,7 +1043,7 @@ section:nth-of-type(even) {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
 }
 
 .nav-header-hide {
@@ -838,12 +1055,12 @@ section:nth-of-type(even) {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background: #00000070;
+  background: transparent;
   border-radius: 20px;
   color: white;
   align-items: center;
-  position: fixed;
-  z-index: 999;
+  position: absolute;
+  z-index: 99;
   overflow: hidden;
   top: 21px;
 }

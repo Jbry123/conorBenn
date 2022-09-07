@@ -15,7 +15,15 @@
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"></script>
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '144071');
+</script>
+  
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -80,7 +88,7 @@
   var viewableOffset = $(".item1").offset().top - $(window).scrollTop();
   $(document).ready(function () {
     setTimeout(function () {
-      $(".item1").animate({ backgroundSize: '101vw', backgroundPositionX: '50%' }, 2000);
+      $(".item1").animate({ backgroundSize: '111vw', backgroundPositionX: '50%' }, 2000);
       $(".spinner").addClass("removeSpinner");
       $(".nav-header-hide").animate({ opacity: '1' }, 1500);
       $(".heroHeader").animate({ opacity: '1' }, 5000);
@@ -129,20 +137,7 @@ setInterval(function () {
 
   });
 
-  var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
 
 
 
@@ -233,7 +228,25 @@ textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='let
     duration: 1000,
   });
 
+
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+
 });
   </script>
+  
 
 </html>
