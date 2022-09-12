@@ -282,13 +282,13 @@ console.log(ethPriceGBP);
           </div>
           <div className="socials">
             <div className="social-link1">
-              <a href="instagram.com/monsterbuds"></a>
+              <a href="instagram.com/BenNFT"></a>
             </div>
             <div className="social-link2">
-              <a href="twitter.com/monsterbuds"></a>
+              <a href="twitter.com/BenNFT"></a>
             </div>
             <div className="social-link3">
-              <a href="discord.com/monsterbuds"></a>
+              <a href="discord.com/BenNFT"></a>
             </div>
           </div>
           <div className="connectWallet" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>

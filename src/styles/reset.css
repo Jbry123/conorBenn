@@ -390,7 +390,7 @@ section:nth-of-type(even) {
 }
 
 .ml14 {
-  font-weight: 200;
+  font-weight: 700;
   font-size: 30px;
 }
 
@@ -1242,6 +1242,7 @@ button:hover {
 .heroHeader {
   font-size: 40px;
   color: white;
+  font-weight: 900;
   font-family: Orbitron;
   opacity: 0;
 }
@@ -2080,4 +2081,19 @@ a {
     background-size: cover !important;
     background-position: -460px 0px !important;
 }
+}
+
+
+@media (min-width: 1920px) {
+  #heroBtnContainer{
+    margin-top: 15px;
+  }
+  #mintHeroBtn {
+    font-size: 20px !important;
+  }
+  .heroSubText {
+    width: 70% !important;
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+  }
 }
