@@ -317,7 +317,7 @@ console.log(ethPriceGBP);
           </div>
         </div>
         <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.1rem", width: "75%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column-reverse" }}>
-          <div id="heroBtnContainer" style={{ width: "50%", padding: "10px 20px"}}><a><button id="mintHeroBtn" style={{padding: "10px 20px", background: "transparent", border: "solid 1px #ffffffed", borderRadius: "15px", color: "white", fontSize: "16px"}}>Mint Now!</button></a></div>
+          <div id="heroBtnContainer" style={{ width: "50%", padding: "10px 20px"}}><a href="#item4"><button id="mintHeroBtn" style={{padding: "10px 20px", background: "transparent", border: "solid 1px #ffffffed", borderRadius: "15px", color: "white", fontSize: "16px"}}>Buy Here!</button></a></div>
           <p id="heroSubText" style={{ width: "80%"}}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
         </div>
       </div>
@@ -350,7 +350,7 @@ console.log(ethPriceGBP);
                 <div className="card_image"><img src={ticket} /></div>
                 <div className="card_content">
                   <h2 className="card_title">Fight Tickets</h2>
-                  <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
+                  <p className="card_text">Ringside and standard seats for NFT holders on upcoming fights </p>
                 </div>
               </div>
             </li>
@@ -368,7 +368,7 @@ console.log(ethPriceGBP);
                 <div className="card_image"><img src={shake} /></div>
                 <div className="card_content">
                   <h2 className="card_title">Meet & Greet</h2>
-                  <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
+                  <p className="card_text">A meet and greet with Conor Benn for 5 people. </p>
                 </div>
               </div>
             </li>
@@ -377,7 +377,7 @@ console.log(ethPriceGBP);
                 <div className="card_image"><img src={sessions} /></div>
                 <div className="card_content">
                   <h2 className="card_title">Live Training Sessions</h2>
-                  <p className="card_text">Ringside and standard seats will be available for NFT holders on upcoming fights </p>
+                  <p className="card_text">Behind the scenes access to a Conor Benn Training session. </p>
                 </div>
               </div>
             </li>
@@ -503,9 +503,9 @@ on Twitter.
 		<div className="direction-r">
 			<div className="flag-wrapper">
 				<span className="flag">33% Minted</span>
-				<span className="time-wrapper"><span className="time">Gloves</span></span>
+				<span className="time-wrapper"><span className="time">Boots</span></span>
 			</div>
-			<div className="desc">Raffle for Conor's signed gloves he used in a match</div>
+			<div className="desc">Raffle for Conor's Boxing Boots he used in a match</div>
 		</div>
 	</li>
 
@@ -871,7 +871,7 @@ on Twitter.
 
         </div>
 
-        <div className="container">
+        <div className="container containerMobile">
 
           <div className="row">
 

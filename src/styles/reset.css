@@ -1974,6 +1974,9 @@ a {
 
 
 @media (max-width: 520px) {
+  .containerMobile {
+    display: none !important;
+  }
 
   .panel p {
     padding: 10px 0 !important;
