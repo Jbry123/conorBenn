@@ -16,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -171,6 +172,14 @@ setInterval(function () {
 <script>
 
 $(document).ready(function () {
+  // axios.get(`https://api.etherscan.io/api?module=stats&action=ethprice&apikey=MIG4QSH7EQ36WU9TS879FHY99QMG7ZSIEG`)
+  // .then(function (response) {
+  //   console.log(response.data);
+  //   console.log(response.status);
+  //   console.log(response.statusText);
+  //   console.log(response.headers);
+  //   console.log(response.config);
+  // });
   // Set the date we're counting down to
   var countDownDate = new Date("Jan 5, 2023 15:37:25").getTime();
   

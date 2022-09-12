@@ -15,6 +15,8 @@ import plotter from "./styles/plotter.png";
 import press from "./styles/lectern.png";
 import sessions from "./styles/sand-bag.png";
 import { Collapse } from 'antd';
+import axios from 'axios';
+import Web3 from "web3";
 
 const { Panel } = Collapse;
 
@@ -114,12 +116,15 @@ export const StyledLink = styled.a`
 
 
 function App() {
+
+  
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
+  const [ethPriceGBP, setEthPriceGBP] = useState(13411111);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "0x20bcde673cc3e77d843d100ea14e3760f64e1e11",
     SCAN_LINK: "https://etherscan.io/address/0x20bcde673cc3e77d843d100ea14e3760f64e1e11",
@@ -131,7 +136,7 @@ function App() {
     NFT_NAME: "BenNFT",
     SYMBOL: "BNFT",
     MAX_SUPPLY: 5555,
-    WEI_COST: 150000000000000000,
+    WEI_COST: ethPriceGBP,
     DISPLAY_COST: 0.15,
     GAS_LIMIT: 120000,
     MARKETPLACE: "opensea",
@@ -209,6 +214,17 @@ function App() {
     });
     const config = await configResponse.json();
     SET_CONFIG(config);
+    const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=MIG4QSH7EQ36WU9TS879FHY99QMG7ZSIEG", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    let price = await priceResponse.json();
+    let calcPrice =(200 / (price.result.ethusd * .85) * 1000000000000000000);
+    setEthPriceGBP(calcPrice);
+    console.log(calcPrice, "testPrice");
+console.log(ethPriceGBP);
   };
 
   useEffect(() => {
@@ -223,7 +239,7 @@ function App() {
     <s.Screen>
       {/*-------------------------ABSOLUTE OBJECTS BELOW---------------------------- */}
       <div className="spinner">
-        <div className="logocontainer" style={{ marginBottom: "25px", fontSize: "60px", fontFamily: "Orbitron", color: "white" }}>
+        <div className="logocontainer2" style={{ marginBottom: "25px", fontSize: "60px", fontFamily: "Orbitron", color: "white" }}>
           BenNFT
         </div>
         <div className="sk-cube-grid">
@@ -301,8 +317,8 @@ function App() {
           </div>
         </div>
         <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.1rem", width: "75%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column-reverse" }}>
-          <div id="heroBtnContainer" style={{ width: "20%", padding: "10px 20px"}}><a><button id="mintHeroBtn" style={{padding: "10px 20px", background: "transparent", border: "solid 1px #ffffffed", borderRadius: "15px", color: "white", fontSize: "16px"}}>Mint Now!</button></a></div>
-          <p style={{ width: "80%"}}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
+          <div id="heroBtnContainer" style={{ width: "50%", padding: "10px 20px"}}><a><button id="mintHeroBtn" style={{padding: "10px 20px", background: "transparent", border: "solid 1px #ffffffed", borderRadius: "15px", color: "white", fontSize: "16px"}}>Mint Now!</button></a></div>
+          <p id="heroSubText" style={{ width: "80%"}}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
         </div>
       </div>
       <div id="item2">

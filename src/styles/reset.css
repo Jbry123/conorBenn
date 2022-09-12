@@ -1319,7 +1319,7 @@ button:hover {
 
 .logocontainer {
   font-family: Orbitron;
-  font-size: 30px;
+  font-size: 27px;
 }
 
 .site-links {
@@ -1914,7 +1914,7 @@ a {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   .site-footer {
     padding: 20px !important;
   }
@@ -1970,4 +1970,111 @@ a {
     height: 86px;
     line-height: 88px;
   }
+}
+
+
+@media (max-width: 520px) {
+
+  .panel p {
+    padding: 10px 0 !important;
+  }
+
+  .cards_item {
+    width: 100% !important;
+  }
+  .desc {
+    background-color: #efefef !important;
+    color: #000000ed !important;
+    margin: 1em 5em 0 5em !important;
+  }
+  .heroSubText2 {
+   line-height: 1.2 !important;
+   padding-right: 2vw !important; 
+  }
+  #item2{
+    height: 120vh !important;
+    background-size: cover !important;
+    background-position: -700px 0px !important;
+  }
+  #item3 {
+    height: 430vh !important;
+
+  }
+  .heroHeader2 h1 {
+    margin-bottom: 3vh;
+  }
+  .logocontainer, .site-links, .socials {
+    width: 50%
+  }
+  .logocontainer {
+    padding-left: 20px;
+  }
+  .ml14 {
+    font-weight: 200;
+    font-size: 27px !important;
+}
+  .button-49, .button-49:after {
+    width: 140px !important;
+    height: 86px;
+    line-height: 88px;
+}
+.supplyContainer .supplyRight, .supplyContainer .supplyLeft {
+  width: 39vw !important;
+  font-size: 1.1rem;
+}
+.quantityContainer .quantityLeft, .quantityContainer .quantityRight {
+  width: 39vw !important;
+  font-size: 1.1rem;
+}
+#buyButton1, #buyButton2 {
+  width: 160px !important;
+  font-size: 13px !important;
+}
+.navContainer, .nav-header-hide{
+  padding: 0 0px !important;
+}
+.nav-header-hide{
+  justify-content: space-between !important;
+}
+  .nav-header-hide {
+    padding: 0 !important;
+  }
+  .heroHeader {
+    font-size: 28px !important;
+  }
+  .item1 {
+    padding: 120px 10px !important;
+  }
+  .heroSubText {
+    width: 100% !important;
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  #item3 {
+    height: 550vh !important;
+
+  }
+  .heroSubText {
+    width: 100% !important;
+    font-size: 13px !important;
+  }
+  .nav-header-hide {
+    top: 0px !important;
+  }
+  .item1 {
+    padding: 90px 10px !important;
+  }
+  #mintHeroBtn {
+    font-size: 12px !important;
+  }
+  #heroSubText{
+    width: 90% !important;
+  }
+  #item2 {
+    height: 140vh !important;
+    background-size: cover !important;
+    background-position: -460px 0px !important;
+}
 }
