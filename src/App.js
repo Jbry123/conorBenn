@@ -251,17 +251,17 @@ function App() {
           </div>
           <div className="site-links">
             <div className="site-link1">
-              <a href="#item1">Learn More</a>
+              <a href="#item1">About</a>
 
             </div>
             <div className="site-link1">
               <a href="#item2">Utility</a>
             </div>
             <div className="site-link1">
-              <a href="#item3">FAQ</a>
+              <a href="#faq">FAQ</a>
             </div>
             <div className="site-link1">
-              <a href="#item4">Mint</a>
+              <a href="#item4">Buy</a>
             </div>
           </div>
           <div className="socials">
@@ -300,13 +300,14 @@ function App() {
 
           </div>
         </div>
-        <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.2rem", width: "75%" }}>
-          <p>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
+        <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.1rem", width: "75%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column-reverse" }}>
+          <div id="heroBtnContainer" style={{ width: "20%", padding: "10px 20px"}}><a><button id="mintHeroBtn" style={{padding: "10px 20px", background: "transparent", border: "solid 1px #ffffffed", borderRadius: "15px", color: "white", fontSize: "16px"}}>Mint Now!</button></a></div>
+          <p style={{ width: "80%"}}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
         </div>
       </div>
       <div id="item2">
         <div className="heroHeader2" >
-          <h1 style={{ textAlign: "left" }}>What is BenNFT?</h1>
+          <h1 style={{ textAlign: "left", marginBottom: "10vh" }}>What is BenNFT?</h1>
           {/* <div className="blueStripe2" style={{ backgroundPosition: "top top" }}>
 
           </div> */}
@@ -405,7 +406,7 @@ function App() {
         </div>
 
 
-        <div className="heroHeader" style={{ textAlign: "center", margin: "50px" }} >
+        <div id="faq" className="heroHeader" style={{ textAlign: "center", margin: "50px" }} >
           <h1 style={{ textAlign: "center", margin: "50px" }}>FAQ:</h1>
           <div className="blueStripe1" style={{ backgroundPosition: "top top" }}>
 
@@ -459,7 +460,93 @@ on Twitter.
 
         </div>
       </div>
-      <h1 className="heroHeader" style={{zIndex: "100", textAlign: "center"}}>Mint Now</h1>
+// TIMELINE START
+<h1 style={{ textAlign: "center", margin: "50px", color: "#ffffffed", fontSize: "35px", fontFamily: "Orbitron" }}>The BenNFT Roadmap</h1>
+<ul className="timeline">
+
+	<li>
+		<div className="direction-r">
+			<div className="flag-wrapper">
+				<span className="flag">LAUNCH</span>
+			</div>
+			<div className="desc">Launch Discord/Website <br /><br />Artwork Previews<br /><br />Open Allowlist</div>
+		</div>
+	</li>
+  
+	<li>
+		<div className="direction-l">
+			<div className="flag-wrapper">
+				<span className="flag">25% Minted</span>
+				<span className="time-wrapper"><span className="time">Raffle</span></span>
+			</div>
+			<div className="desc">Raffle for The Connor Brothers art</div>
+		</div>
+	</li>
+
+  <li>
+		<div className="direction-r">
+			<div className="flag-wrapper">
+				<span className="flag">33% Minted</span>
+				<span className="time-wrapper"><span className="time">Gloves</span></span>
+			</div>
+			<div className="desc">Raffle for Conor's signed gloves he used in a match</div>
+		</div>
+	</li>
+
+	<li>
+		<div className="direction-l">
+			<div className="flag-wrapper">
+				<span className="flag">50% Minted</span>
+				<span className="time-wrapper"><span className="time">Community Content</span></span>
+			</div>
+			<div className="desc">AMA with Conor Benn<br /><br />BTS access to watch training session</div>
+		</div>
+	</li>
+
+  <li>
+		<div className="direction-r">
+			<div className="flag-wrapper">
+				<span className="flag">75% Minted</span>
+				<span className="time-wrapper"><span className="time">Raffle</span></span>
+			</div>
+			<div className="desc">Snapshot for standard seat raffle</div>
+		</div>
+	</li>
+
+  <li>
+		<div className="direction-l">
+			<div className="flag-wrapper">
+				<span className="flag">100% Minted</span>
+				<span className="time-wrapper"><span className="time">Raffles</span></span>
+			</div>
+			<div className="desc">Snapshot for Conor's robe raffle<br /><br />Snapshot for Conor's gloves raffle<br /><br />Raffle for ringside seats</div>
+		</div>
+	</li>
+
+  <li>
+		<div className="direction-r">
+			<div className="flag-wrapper">
+				<span className="flag">Winners Drawn</span>
+			</div>
+			<div className="desc">The winners from all snapshots will be revealed.</div>
+		</div>
+	</li>
+
+  <li>
+		<div className="direction-l">
+			<div className="flag-wrapper">
+				<span className="flag">Additional Utility</span>
+			</div>
+			<div className="desc">More TBD and upcoming fight.</div>
+		</div>
+	</li>
+  
+</ul>
+// TIMELINE END
+
+
+
+      <h1 className="heroHeader" style={{zIndex: "100", textAlign: "center", margin: "50px"}}>Mint Now</h1>
       <div id="item4">
         <div className="heroHeader" >
           {/* <s.TextTitle
@@ -605,11 +692,11 @@ on Twitter.
                     {claimingNft ? "MINTING" : "Buy w/ Credit Card"}
                   </StyledButton>
                   <div className="heroSubText" style={{ marginTop: "30.5vh", padding: "10px 0px", position: "absolute" }}>
-                    <h1 style={{ textAlign: "center" }}> Ends In:</h1>
-                    <div id="countdown"></div>
+                    
                   </div>
                 </s.Container>
-
+<h1 style={{ textAlign: "center", fontSize: "25px", marginTop: "25px" }}> Ends In:</h1>
+                    <div id="countdown"></div>
 
                 {blockchain.errorMsg !== "" ? (
                   <>
@@ -781,7 +868,7 @@ on Twitter.
             </div>
 
             <div className="col-xs-6 col-md-3">
-              <div class="ml-embedded" data-form="kTbFbe"></div>
+              <div className="ml-embedded" data-form="kTbFbe"></div>
             </div>
 
           </div>

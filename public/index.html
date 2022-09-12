@@ -88,7 +88,7 @@
   var viewableOffset = $(".item1").offset().top - $(window).scrollTop();
   $(document).ready(function () {
     setTimeout(function () {
-      $(".item1").animate({ backgroundSize: '111vw', backgroundPositionX: '50%' }, 2000);
+      $(".item1").animate({ opacity: '1' }, 2000);
       $(".spinner").addClass("removeSpinner");
       $(".nav-header-hide").animate({ opacity: '1' }, 1500);
       $(".heroHeader").animate({ opacity: '1' }, 5000);
@@ -113,16 +113,16 @@ setInterval(function () {
         if (y == 'down') {
           // $(".nav-header-hide").removeClass( "upScroll" );
           // $(".nav-header-hide").addClass( "downScroll" );
-          $(".nav-header-hide").slideDown(400);
+          $(".nav-header-hide").slideUp(400);
         } else if ( y == 'up') {
           // $(".nav-header-hide").removeClass( "downScroll" );
           // $(".nav-header-hide").addClass( "upScroll" );
-          $(".nav-header-hide").slideUp(400);
+          $(".nav-header-hide").slideDown(400);
         };
     
         // update last scroll position to current position
         lastY = currY;
-        if (currY < 300 & currY >= 0 ) {
+        if (currY < 1 & currY >= 0 ) {
           $(".nav-header-hide").slideDown(400);
           return;
         };
@@ -190,8 +190,38 @@ $(document).ready(function () {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
     // Display the result in the element with id="demo"
-    document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hours "
-    + minutes + " Mins " + seconds + " Secs ";
+    const html = 
+      `<div>
+        <div class="spanContainer1">
+          <span class="span1">
+            ${days}
+          </span>
+          <span class="span2">
+            Days
+          </span>
+        </div>
+        <div class="spanContainer2">
+          <span class="span1">
+            ${hours}
+          </span>
+          <span class="span2">
+            Hours
+          </span>
+        </div>
+        <div class="spanContainer3">
+          <span class="span1">
+            ${minutes}
+          </span>
+          <span class="span2">
+            Mins
+          </span>
+        </div>
+      </div>`;
+
+    document.getElementById("countdown").innerHTML = html;
+    
+    // document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hours "
+    // + minutes + " Mins " + seconds + " Secs ";
   
     // If the count down is finished, write some text
     if (distance < 0) {
