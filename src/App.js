@@ -117,7 +117,7 @@ export const StyledLink = styled.a`
 
 function App() {
 
-  
+
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -221,10 +221,10 @@ function App() {
       },
     });
     let price = await priceResponse.json();
-    let calcPrice =(200 / (price.result.ethusd * .85) * 1000000000000000000);
+    let calcPrice = (200 / (price.result.ethusd * .85) * 1000000000000000000);
     setEthPriceGBP(calcPrice);
     console.log(calcPrice, "testPrice");
-console.log(ethPriceGBP);
+    console.log(ethPriceGBP);
   };
 
   useEffect(() => {
@@ -281,15 +281,21 @@ console.log(ethPriceGBP);
             </div>
           </div>
           <div className="socials">
-            <div className="social-link1">
-              <a href="instagram.com/BenNFT"></a>
-            </div>
-            <div className="social-link2">
-              <a href="twitter.com/BenNFT"></a>
-            </div>
-            <div className="social-link3">
-              <a href="discord.com/BenNFT"></a>
-            </div>
+            <a href="https://instagram.com/BenNFT">
+              <div className="social-link1">
+                
+              </div>
+            </a>
+            <a href="https://twitter.com/BenNFT">
+              <div className="social-link2">
+              
+              </div>
+             </a>
+            <a href="https://discord.com/BenNFT">
+              <div className="social-link3">
+                
+              </div>
+            </a>
           </div>
           <div className="connectWallet" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             {blockchain.account === "" ||
@@ -311,14 +317,12 @@ console.log(ethPriceGBP);
       {/*-------------------------ABSOLUTE OBJECTS ABOVE---------------------------- */}
       <div className="item1" id="item1">
         <div className="heroHeader">
-          <h1 style={{ textAlign: "center" }}>Build a Legacy With<br />Conor Benn</h1>
-          <div className="blueStripe1">
-
-          </div>
+          <h1 style={{ textAlign: "center", letterSpacing: ".2rem", lineHeight: "1.2" }}>Build a Legacy With<br />Conor Benn</h1>
+          
         </div>
         <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.1rem", width: "75%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column-reverse" }}>
-          <div id="heroBtnContainer" style={{ width: "50%", padding: "10px 20px"}}><a href="#item4"><button id="mintHeroBtn" style={{padding: "10px 20px", background: "transparent", border: "solid 1px #ffffffed", borderRadius: "15px", color: "white", fontSize: "16px"}}>Buy Here!</button></a></div>
-          <p id="heroSubText" style={{ width: "80%"}}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
+          {/* <div id="heroBtnContainer" style={{ width: "50%", padding: "10px 20px" }}><a href="#item4"><button id="mintHeroBtn" style={{ padding: "10px 20px", background: "transparent", border: "solid 1px #ffffffed", borderRadius: "15px", color: "white", fontSize: "16px" }}>Buy Here!</button></a></div> */}
+          <p id="heroSubText" style={{ width: "80%", letterSpacing: ".1rem", lineHeight: "1.2" }}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
         </div>
       </div>
       <div id="item2">
@@ -381,7 +385,7 @@ console.log(ethPriceGBP);
                 </div>
               </div>
             </li>
-            
+
             <li className="cards_item">
               <div className="card">
                 <div className="card_image"><img src={boxingShorts} /></div>
@@ -418,152 +422,37 @@ console.log(ethPriceGBP);
                 </div>
               </div>
             </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={plotter} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">IRL Events</h2>
+                  <p className="card_text">Special experiences, q&a sessions & more only for Holders.</p>
+                </div>
+              </div>
+            </li>
+            <li className="cards_item">
+              <div className="card">
+                <div className="card_image"><img src={boxingShorts} /></div>
+                <div className="card_content">
+                  <h2 className="card_title">Monthly Prizes</h2>
+                  <p className="card_text">Cash prizes and other surprises exclusively for BENNFT holders, every month.</p>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
 
 
-        <div id="faq" className="heroHeader" style={{ textAlign: "center", margin: "50px" }} >
-          <h1 style={{ textAlign: "center", margin: "50px" }}>FAQ:</h1>
-          <div className="blueStripe1" style={{ backgroundPosition: "top top" }}>
-
-          </div>
-        </div>
-        <div style={{ marginBottom: "50px" }} id="accordionContainer">
-          <button className="accordion">What are the benefits of holding a BenNFT?</button>
-          <div className="panel">
-            <p>BenNFTs grant you exclusive access to Conor and his legacy. These NFTs give you unmatched
-opportunities and benefits, including but not limited to: Fight Tickets, Press Conference Access,
-Meet & Greets, Live Training Sessions, Signed Memorabilia, 1-on-1 Calls, Virtual Hangouts, and
-Behind-The-Scenes access to Conor’s life.
-</p>
-          </div>
-
-          <button className="accordion">How much do they cost?</button>
-          <div className="panel">
-            <p>There are two pricing options for BenNFTs. Early Allow List (Presale) can purchase a
-BenNFT for £200 GBP and the Public Sale can purchase a BenNFT for £250 GBP.</p>
-          </div>
-
-          <button className="accordion"> What is the Allow List and how can I get on it?</button>
-          <div className="panel">
-            <p>The Allow List is to reward our early supporters of Conor and the project. The Allow List can
-purchase a BenNFT for 20% off (£200 GBP) and has a 3 hour purchase period before the
-Public Sale. <br />
-You can get on the Allow List by joining our Discord, engaging with the community, playing
-weekly games, and interacting with us on Twitter.
-
-</p>
-          </div>
-
-          <button className="accordion">Will each NFT be unique?</button>
-          <div className="panel">
-            <p>Yes, every single NFT will be unique with traits. There will also be rares and special 1/1 NFTs
-that will offer even more utility than the rest.</p>
-          </div>
-
-          <button className="accordion">How can I stay up to date?</button>
-          <div className="panel">
-            <p>Stay up to date with the latest news and announcements by joining our Discord and following us
-on Twitter.
-</p>
-          </div>
-
-          <button className="accordion">Where can I buy a BenNFT if I miss the sale?
-</button>
-          <div className="panel">
-            <p>BenNFTs will be available for purchase on a secondary market such as Opensea.</p>
-          </div>
-
-        </div>
+        
       </div>
-// TIMELINE START
-<h1 style={{ textAlign: "center", margin: "50px", color: "#ffffffed", fontSize: "35px", fontFamily: "Orbitron" }}>The BenNFT Roadmap</h1>
-<ul className="timeline">
-
-	<li>
-		<div className="direction-r">
-			<div className="flag-wrapper">
-				<span className="flag">LAUNCH</span>
-			</div>
-			<div className="desc">Launch Discord/Website <br /><br />Artwork Previews<br /><br />Open Allowlist</div>
-		</div>
-	</li>
-  
-	<li>
-		<div className="direction-l">
-			<div className="flag-wrapper">
-				<span className="flag">25% Minted</span>
-				<span className="time-wrapper"><span className="time">Raffle</span></span>
-			</div>
-			<div className="desc">Raffle for The Connor Brothers art</div>
-		</div>
-	</li>
-
-  <li>
-		<div className="direction-r">
-			<div className="flag-wrapper">
-				<span className="flag">33% Minted</span>
-				<span className="time-wrapper"><span className="time">Boots</span></span>
-			</div>
-			<div className="desc">Raffle for Conor's Boxing Boots he used in a match</div>
-		</div>
-	</li>
-
-	<li>
-		<div className="direction-l">
-			<div className="flag-wrapper">
-				<span className="flag">50% Minted</span>
-				<span className="time-wrapper"><span className="time">Community Content</span></span>
-			</div>
-			<div className="desc">AMA with Conor Benn<br /><br />BTS access to watch training session</div>
-		</div>
-	</li>
-
-  <li>
-		<div className="direction-r">
-			<div className="flag-wrapper">
-				<span className="flag">75% Minted</span>
-				<span className="time-wrapper"><span className="time">Raffle</span></span>
-			</div>
-			<div className="desc">Snapshot for standard seat raffle</div>
-		</div>
-	</li>
-
-  <li>
-		<div className="direction-l">
-			<div className="flag-wrapper">
-				<span className="flag">100% Minted</span>
-				<span className="time-wrapper"><span className="time">Raffles</span></span>
-			</div>
-			<div className="desc">Snapshot for Conor's robe raffle<br /><br />Snapshot for Conor's gloves raffle<br /><br />Raffle for ringside seats</div>
-		</div>
-	</li>
-
-  <li>
-		<div className="direction-r">
-			<div className="flag-wrapper">
-				<span className="flag">Winners Drawn</span>
-			</div>
-			<div className="desc">The winners from all snapshots will be revealed.</div>
-		</div>
-	</li>
-
-  <li>
-		<div className="direction-l">
-			<div className="flag-wrapper">
-				<span className="flag">Additional Utility</span>
-			</div>
-			<div className="desc">More TBD and upcoming fight.</div>
-		</div>
-	</li>
-  
-</ul>
-// TIMELINE END
 
 
 
-      <h1 className="heroHeader" style={{zIndex: "100", textAlign: "center", margin: "50px"}}>Mint Now</h1>
+
       <div id="item4">
+              
+
         <div className="heroHeader" >
           {/* <s.TextTitle
                   style={{
@@ -577,9 +466,9 @@ on Twitter.
                   {data.totalSupply} / {CONFIG.MAX_SUPPLY}
                 </s.TextTitle> */}
 
-          <>
+          <><h1 className="heroHeader" style={{ zIndex: "100", textAlign: "center", margin: "50px" }}>Buy Here</h1>
             <div className="supplyContainer">
-              
+
               <div className="supplyLeft">
                 Supply
               </div>
@@ -593,7 +482,7 @@ on Twitter.
                 Price
               </div>
               <div className="quantityRight">
-              £ 200 GBP
+                £ 200 GBP
               </div>
             </div>
             {blockchain.account === "" ||
@@ -708,11 +597,13 @@ on Twitter.
                     {claimingNft ? "MINTING" : "Buy w/ Credit Card"}
                   </StyledButton>
                   <div className="heroSubText" style={{ marginTop: "30.5vh", padding: "10px 0px", position: "absolute" }}>
-                    
+
                   </div>
                 </s.Container>
-<h1 style={{ textAlign: "center", fontSize: "25px", marginTop: "25px" }}> Ends In:</h1>
-                    <div id="countdown"></div>
+                <div className="fancy">
+                  <span>Ends In:</span>
+                </div>
+                <div id="countdown"></div>
 
                 {blockchain.errorMsg !== "" ? (
                   <>
@@ -729,7 +620,7 @@ on Twitter.
               </s.Container>
             ) : (
               <>
-<s.TextDescription
+                <s.TextDescription
                   style={{
                     textAlign: "center",
                     color: "#ffffffed",
@@ -833,40 +724,186 @@ on Twitter.
 
 
       </div>
-      <footer className="site-footer" style={{ display: "flex", justifyContent: "center", background: "transparent", zIndex: "200", boxShadow: "0px -5px 60px 40px #000000ad", marginTop: "10vh" }}>
+      <div id="faq">
+      <div  className="heroHeader" style={{ textAlign: "center", margin: "80px" }} >
+          <h1 style={{ textAlign: "center", margin: "50px" }}>FAQ:</h1>
+          
+        </div>
+        <div style={{display: "flex", justifyContent: "center"}}>
+        <div style={{ marginBottom: "50px" }} id="accordionContainer">
+        
+          <button className="accordion">What is an NFT? And why use them for this?</button>
+          <div className="panel">
+            <p>NFTs, simply put, are a small part of ownership verification, for the distributed internet known as the blockchain.
+              they can be bought and sold based on what people are willing to give for the value locked into them, that can be: membership, giveaways, purchases, investments, anything.
+              <br /><br />
+              We're using NFTs and other blockchain technologies because the capability to give back to the community we build, verify giveaways, and otherwise be transparent in what we're building here at <i>BenNFT</i>.
+            </p>
+          </div>
+
+          <button className="accordion">What are the benefits of holding a BenNFT?</button>
+          <div className="panel">
+            <p>BenNFTs grant you exclusive access to Conor and his legacy. These NFTs give you unmatched
+              opportunities and benefits, including but not limited to: Fight Tickets, Press Conference Access,
+              Meet & Greets, Live Training Sessions, Signed Memorabilia, 1-on-1 Calls, Virtual Hangouts, and
+              Behind-The-Scenes access to Conor’s life.
+            </p>
+          </div>
+
+          <button className="accordion">How much do they cost?</button>
+          <div className="panel">
+            <p>There are two pricing options for BenNFTs. Early Allow List (Presale) can purchase a
+              BenNFT for £200 GBP and the Public Sale can purchase a BenNFT for £250 GBP.</p>
+          </div>
+
+          <button className="accordion"> What is the Allow List and how can I get on it?</button>
+          <div className="panel">
+            <p>The Allow List is to reward our early supporters of Conor and the project. The Allow List can
+              purchase a BenNFT for 20% off (£200 GBP) and has a 3 hour purchase period before the
+              Public Sale. <br />
+              You can get on the Allow List by joining our Discord, engaging with the community, playing
+              weekly games, and interacting with us on Twitter.
+
+            </p>
+          </div>
+
+          <button className="accordion">Will each NFT be unique?</button>
+          <div className="panel">
+            <p>Yes, every single NFT will be unique with traits. There will also be rares and special 1/1 NFTs
+              that will offer even more utility than the rest.</p>
+          </div>
+
+          <button className="accordion">How can I stay up to date?</button>
+          <div className="panel">
+            <p>Stay up to date with the latest news and announcements by joining our Discord and following us
+              on Twitter.
+            </p>
+          </div>
+
+          <button className="accordion">Where can I buy a BenNFT if I miss the sale?
+          </button>
+          <div className="panel">
+            <p>BenNFTs will be available for purchase on a secondary market such as Opensea.</p>
+          </div>
+
+        </div>
+</div>
+</div>
+        {/* // TIMELINE START */}
+      <div id="timelineContainer">
+      <h1 style={{ textAlign: "center", margin: "50px", color: "#ffffffed", fontSize: "35px", fontFamily: "Orbitron" }}>The BenNFT Roadmap</h1>
+      <ul className="timeline">
+
+        <li>
+          <div className="direction-r">
+            <div className="flag-wrapper">
+              <span className="flag">LAUNCH</span>
+            </div>
+            <div className="desc">Launch Discord/Website <br /><br />Artwork Previews<br /><br />Open Allowlist</div>
+          </div>
+        </li>
+
+        <li>
+          <div className="direction-l">
+            <div className="flag-wrapper">
+              <span className="flag">25% Minted</span>
+              <span className="time-wrapper"><span className="time">Raffle</span></span>
+            </div>
+            <div className="desc">Raffle for The Connor Brothers art</div>
+          </div>
+        </li>
+
+        <li>
+          <div className="direction-r">
+            <div className="flag-wrapper">
+              <span className="flag">33% Minted</span>
+              <span className="time-wrapper"><span className="time">Boots</span></span>
+            </div>
+            <div className="desc">Raffle for Conor's Boxing Boots he used in a match</div>
+          </div>
+        </li>
+
+        <li>
+          <div className="direction-l">
+            <div className="flag-wrapper">
+              <span className="flag">50% Minted</span>
+              <span className="time-wrapper"><span className="time">Community Content</span></span>
+            </div>
+            <div className="desc">AMA with Conor Benn<br /><br />BTS access to watch training session</div>
+          </div>
+        </li>
+
+        <li>
+          <div className="direction-r">
+            <div className="flag-wrapper">
+              <span className="flag">75% Minted</span>
+              <span className="time-wrapper"><span className="time">Raffle</span></span>
+            </div>
+            <div className="desc">Snapshot for standard seat raffle</div>
+          </div>
+        </li>
+
+        <li>
+          <div className="direction-l">
+            <div className="flag-wrapper">
+              <span className="flag">100% Minted</span>
+              <span className="time-wrapper"><span className="time">Raffles</span></span>
+            </div>
+            <div className="desc">Snapshot for Conor's robe raffle<br /><br />Snapshot for Conor's gloves raffle<br /><br />Raffle for ringside seats</div>
+          </div>
+        </li>
+
+        <li>
+          <div className="direction-r">
+            <div className="flag-wrapper">
+              <span className="flag">Winners Drawn</span>
+            </div>
+            <div className="desc">The winners from all snapshots will be revealed.</div>
+          </div>
+        </li>
+
+        <li>
+          <div className="direction-l">
+            <div className="flag-wrapper">
+              <span className="flag">Additional Utility</span>
+            </div>
+            <div className="desc">More TBD and upcoming fight.</div>
+          </div>
+        </li>
+
+      </ul>
+      </div>
+{/* // TIMELINE END */}
+      <footer className="site-footer" style={{ display: "flex", justifyContent: "center", background: "transparent", zIndex: "200", boxShadow: "0px -5px 60px 40px #000000ad" }}>
 
         <div className="container" style={{ display: "flex", justifyContent: "center", width: "50%" }}>
 
           <div className="row" style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "space-evenly", width: "100%" }}>
             <div>
-            <h2 style={{ display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "space-evenly", width: "100%", fontSize: "40px", fontFamily: "Orbitron" }}>BenNFT</h2>
+              <h2 style={{ display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "space-evenly", width: "100%", fontSize: "40px", fontFamily: "Orbitron" }}>BenNFT</h2>
             </div>
 
 
             <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
-            <div className="col-xs-6 col-md-3" style={{ width: "100%", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", margin: "25px 0px"  }}>
-              <h6>Links</h6>
-              <ul className="footer-links">
-                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-              </ul>
-            </div>
+              <div id="links" className="col-xs-6 col-md-3" style={{ width: "100%", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", margin: "25px 0px" }}>
+                <h6>Links</h6>
+                <ul className="footer-links">
+                  <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                  <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                  <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                </ul>
+              </div>
 
-            <div className="col-xs-6 col-md-3" style={{ width: "100%", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", margin: "25px 0px" }}>
-              <h6>Community</h6>
-              <ul className="footer-links">
-                <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-              </ul>
+              <div className="col-xs-6 col-md-3" style={{ width: "100%", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", margin: "25px 0px" }}>
+                <h6>Community</h6>
+                <ul className="footer-links">
+                  <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                  <li><a href="http://scanfcode.com/privacy-policy/">Privacy</a></li>
+                  <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                </ul>
+              </div>
             </div>
-</div>
+            <p style={{ textAlign: "center" }}>Copyright © 2022 BenNFT. All Rights Reserved </p>
           </div>
 
         </div>

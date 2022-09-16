@@ -17,6 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -181,6 +182,11 @@ $(document).ready(function () {
   //   console.log(response.config);
   // });
   // Set the date we're counting down to
+
+  $('.site-link1 a').on('click', function(){
+    $(this).addClass('current').parent().siblings().children().removeClass('current');
+  }); 
+
   var countDownDate = new Date("Jan 5, 2023 15:37:25").getTime();
   
   // Update the count down every 1 second

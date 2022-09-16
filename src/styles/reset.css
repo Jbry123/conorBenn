@@ -137,7 +137,7 @@ table {
 
 body {
   margin: 0;
-  font-family: "coder", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  font-family: "Roboto Slab", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -172,6 +172,34 @@ section:nth-of-type(even) {
   background-color: #000;
 }
 
+.fancy {
+  margin: 25px;
+  line-height: 0.1;
+  text-align: center;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  top: 0;
+  width: 600px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 50px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 50px;
+}
+
 
 .button-49,
 .button-49:after {
@@ -185,7 +213,7 @@ section:nth-of-type(even) {
   border: 0;
   color: #ffffffed;
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00058E;
+  box-shadow: 6px 0px 0px #FFE300;
   outline: transparent;
   position: relative;
   user-select: none;
@@ -209,7 +237,7 @@ section:nth-of-type(even) {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00058E 3%, #00058E 5%, #FF013C 5%);
+  background: linear-gradient(45deg, transparent 3%, #FFE300 3%, #FFE300 5%, #FFE300 5%);
   text-shadow: -3px -3px 0px #000, 3px 3px 0px #727272;
   clip-path: var(--slice-0);
 }
@@ -421,21 +449,23 @@ section:nth-of-type(even) {
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: rgba(175, 175, 175, 0.5);
+  border-radius: 15px;
+  margin: 40px 0px 0px 0px;
+  background: #2D373E;
   color: #ffffffed;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
-  font-family:  Roboto;
+  font-family:  Roboto Slab;
   font-size: 1.5rem;
-  border: solid .62px #ffffff99;
+  border: solid 0px #14181b;
   outline: none;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #cc00008e;
+  background-color: hsl(205, 6%, 19%);
 }
 
 #accordionContainer {
@@ -444,8 +474,10 @@ section:nth-of-type(even) {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 0 18px;
-  background-color: #ffffffc0;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: -25px;
+  padding: 10px 18px;
+  background-color: #E8E9EA;
   max-height: 0;
   width: 100%;
   overflow: hidden;
@@ -453,26 +485,38 @@ section:nth-of-type(even) {
 }
 
 .panel p {
-  font-family: Roboto;
-  padding: 20px 40px;
+  font-family: Roboto Slab;
+  padding: 40px 40px;
   line-height: 1.1;
+}
+
+
+.social-link1:hover , .social-link2:hover, .social-link3:hover {
+ transform: scale(1.2);
+}
+
+.site-link1 a:hover {
+  color: #FFE300;
+}
+.current {
+  color: #FFE300;
 }
 
 .item1 {
   width: 100vw;
   height: 100vh;
   background: url("./home.png") no-repeat center center;
-  animation: all 11.8s;
+  transition: all 1.8s;
   background-size: cover !important;
-  padding: 130px 140px;
-  opacity: 0.3;
+  padding: 160px 140px;
+  opacity: 0.1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   border: solid 2px #000;
   z-index: 20;
-  box-shadow: inset -19px -2px 63px 20px #000, 20px 0px 15px 13px #000;
+  box-shadow: inset -19px -2px 63px 20px #000, 0px 0px 15px 13px #000;
 }
 
 button {
@@ -487,44 +531,64 @@ button:hover {
 #item2 {
   width: 100vw;
   height: 100vh;
-  background: url("./Group\ 748.png") no-repeat center bottom, url("./other-bg.png") no-repeat center center ;
+  background: url("./whatis.png") no-repeat right bottom ;
   animation: all 11.8s;
-  background-size: 112%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 13;
-  box-shadow: 2px 4px 23px 2px #87241d;
+  box-shadow: 2px 4px 23px 2px #d0b60a;
+}
+#item2::before {
+  background: url("./conorBenn.png") no-repeat center bottom;
 }
 
 #item3 {
   padding: 80px 55px !important;
   width: 100vw;
-  height: 200vh;
-  min-height: 2000px;
+  height: auto;
+  min-height: 110vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(to top, #000 30%, rgb(26, 26, 26) 100%);
-  background-size: 100%;
+  background: url("./utility.png") no-repeat left bottom ;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #item4 {
+  min-height: 110vh;
   height: 95vh;
   padding: 210px 125px;
   box-shadow: inset 19px -2px 63px 20px #000, 0px -20px 60px 19px #000;
-  background: url("./mintHero.png") center bottom no-repeat;
+  background: url("./mint.png") center center no-repeat;
   background-size: cover !important;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 80;
-  mask-image: linear-gradient(18deg, transparent 2%, black 25%, black 92%, transparent 100%), linear-gradient(to top, transparent 5%, transparent 92%);
+  mask-image: linear-gradient(10deg, transparent 2%, black 25%, black 92%, transparent 100%), linear-gradient(to top, transparent 5%, transparent 92%);
+}
+
+#faq {
+  padding: 100px 125px;
+  box-shadow: 0px 10px 22px -9px #fff;
+  height: auto;
+  z-index: 10;
+  min-height: 110vh;
+  background: url("./faq.png") center bottom no-repeat;
+  background-size: cover !important;
+}
+
+#timelineContainer {
+  height: auto;
+  background: url("./RoadMap.png") center right no-repeat;
+  background-size: cover !important;
 }
 
 #mlb2-1354623.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
@@ -547,7 +611,7 @@ button:hover {
 
 .site-footer
 {
-  background-color:#26272b;
+  background: linear-gradient(to bottom, #020606, #000 100%) !important;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
@@ -878,10 +942,13 @@ button:hover {
 
 .cards {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
+  
 }
 
 .cards_item {
@@ -902,16 +969,21 @@ button:hover {
 }
 
 .card {
-  background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  border: solid 3px #a0a0a0ab;
+  border-radius: 50px;
+  /* border: solid 2px #2e2b2b; */
+  border-radius: 50px;
+  background: linear-gradient(to bottom, #2D373E 65%, #3C4952 66%);
 }
 
 .card_content {
+  background: #3C4952 ;
   padding: 1rem;
 }
 
@@ -922,21 +994,14 @@ button:hover {
 }
 
 
-.card:nth-of-type(odd) {
-  background: linear-gradient(to bottom left, #00058E 10%, #000 45%);
-}
-
-.card:nth-of-type(even) {
-  background: linear-gradient(to bottom left, #CC0000 10%, #000 45%);
-}
-
 .card_title {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0px;
+  font-family: 'Roboto';
   text-align: center;
 }
 
@@ -961,7 +1026,8 @@ button:hover {
 .timeline {
   position: relative;
   width: 660px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: 5vw;
   margin-top: 20px;
   padding: 1em 0;
   list-style-type: none;
@@ -1170,7 +1236,7 @@ button:hover {
 	margin-left: -9px;
 	background: #fff;
 	border-radius: 10px;
-	border: 4px solid rgb(255,80,80);
+	border: 4px solid #b5a418;
 	z-index: 10;
 }
 
@@ -1337,40 +1403,46 @@ button:hover {
 }
 
 .site-link1 {
+  transition: all .3s;
   padding: 10px;
   text-decoration: none;
 }
 
 .site-link1 a {
+  transition: all .3s;
   text-decoration: none;
 }
 
 .social-link1 a,
 .social-link1 {
+  transition: all .3s;
   margin: 10px;
-  width: 38px;
-  height: 38px;
+  width: 28px;
+  height: 28px;
   background: url("./insta.png") no-repeat center center;
   background-size: cover;
 }
 
 .social-link2 a,
 .social-link2 {
+  transition: all .3s;
   margin: 10px;
-  width:38px;
-  height: 38px;
+  width: 28px;
+  height: 28px;
   background: url("./twitterColor.png") no-repeat center center;
   background-size: cover;
 }
 
 .social-link3 a,
 .social-link3 {
+  transition: all .3s;
   margin: 10px;
-  width: 38px;
-  height: 38px;
+  width: 28px;
+  height: 28px;
   background: url("./discordWhite.webp") no-repeat center center;
   background-size: cover;
 }
+
 
 
 .navContainer {
@@ -1386,13 +1458,13 @@ button:hover {
 .nav-header-hide {
   animation: opacity 1.2s;
   height: 100px;
-  width: 90%;
+  width: 96%;
   opacity: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background: transparent;
+  background: rgb(0, 0, 0, .5);
   border-radius: 20px;
   color: white;
   align-items: center;
@@ -1916,8 +1988,38 @@ a {
 }
 
 @media (max-width: 840px) {
+  #timelineContainer {
+    height: auto;
+    background: transparent;
+    background-size: cover !important;
+  }
+  #faq {
+    padding: 100px 125px;
+    box-shadow: 0px 10px 22px -9px #fff;
+    height: auto;
+    z-index: 10;
+    min-height: 110vh;
+    background: url("./faqMobile.png") center top no-repeat;
+    background-size: cover !important;
+  }
+  .timeline {
+    margin-left: 0 !important;
+  }
+  #faq {
+    padding: 0 !important;
+  }
+  #item3 {
+    background: url("./faqMobile.png") no-repeat left bottom !important ;
+    background-size: cover !important;
+  }
   .site-footer {
     padding: 20px !important;
+  }
+
+  #item2 {
+    width: 100vw;
+    height: 100vh;
+    background: url("./whatisMobile.png") no-repeat right bottom ;
   }
 
   .cards_item {
@@ -1971,6 +2073,15 @@ a {
     height: 86px;
     line-height: 88px;
   }
+  .panel p {
+    padding: 20px 0px;
+  }
+  #links {
+    display: none !important;
+  }
+  .container {
+    width: 100% !important;
+  }
 }
 
 
@@ -1980,7 +2091,7 @@ a {
   }
 
   .panel p {
-    padding: 10px 0 !important;
+    padding: 20px 0 !important;
   }
 
   .cards_item {
@@ -1998,10 +2109,9 @@ a {
   #item2{
     height: 120vh !important;
     background-size: cover !important;
-    background-position: -700px 0px !important;
   }
   #item3 {
-    height: 430vh !important;
+    height: auto !important;
 
   }
   .heroHeader2 h1 {
@@ -2015,6 +2125,7 @@ a {
   }
   .ml14 {
     font-weight: 200;
+    letter-spacing: .2rem !important;
     font-size: 27px !important;
 }
   .button-49, .button-49:after {
@@ -2044,6 +2155,7 @@ a {
     padding: 0 !important;
   }
   .heroHeader {
+    margin-top: 15px !important;
     font-size: 28px !important;
   }
   .item1 {
