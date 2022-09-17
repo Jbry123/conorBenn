@@ -183,6 +183,18 @@ $(document).ready(function () {
   // });
   // Set the date we're counting down to
 
+  $(document).delegate('.open', 'click', function(event){
+			$(this).addClass('oppenned');
+			event.stopPropagation();
+		})
+		$(document).delegate('body', 'click', function(event) {
+			$('.open').removeClass('oppenned');
+		})
+		$(document).delegate('.cls', 'click', function(event){
+			$('.open').removeClass('oppenned');
+			event.stopPropagation();
+		});
+
   $('.site-link1 a').on('click', function(){
     $(this).addClass('current').parent().siblings().children().removeClass('current');
   }); 
