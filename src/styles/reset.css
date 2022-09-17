@@ -210,7 +210,7 @@ section:nth-of-type(even) {
 .button-49,
 .button-49:after {
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 800;
   width: 250px;
   height: 76px;
   line-height: 78px;
@@ -807,6 +807,7 @@ button:hover {
   height: 52px;
   padding: 10px 5px;
   font-size: 13px;
+  font-weight: 800;
   font-family: Orbitron;
 }
 
@@ -819,6 +820,7 @@ button:hover {
   height: 52px;
   padding: 10px 5px;
   font-size: 13px;
+  font-weight: 800;
   font-family: Orbitron;
 }
 
@@ -1001,6 +1003,11 @@ button:hover {
 }
 
 .card_content {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  min-height: 170px;
   background: #3C4952;
   padding: 1rem;
 }
@@ -1015,20 +1022,21 @@ button:hover {
 .card_title {
   color: #ffffffed;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0px;
-  font-family: 'Roboto Slab';
+  font-family: 'Orbitron';
   text-align: center;
 }
 
 .card_text {
   color: #A3ABB1;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-top: 1.25rem;
   font-weight: 400;
+  font-family: Roboto Slab;
   text-align: center;
 }
 
@@ -1111,7 +1119,7 @@ button:hover {
   padding: 6px 10px;
   border-radius: 5px;
   font-family: Orbitron;
-  font-weight: 600;
+  font-weight: 900;
   text-align: left;
 }
 
@@ -1197,6 +1205,7 @@ button:hover {
   font-family: Orbitron;
   display: inline-block;
   padding: 4px 6px;
+  font-weight: 900;
   background: rgb(248, 248, 248);
 }
 

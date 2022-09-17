@@ -445,8 +445,8 @@ function App() {
               <div className="card">
                 <div className="card_image"><img src={boxingGloves} /></div>
                 <div className="card_content">
-                  <h2 className="card_title">Behind-The-Scenes Access to Conor's Life</h2>
-                  <p className="card_text">1 lucky token holder will win the gloves that Conor uses in his upcoming fight. </p>
+                  <h2 className="card_title">B.T.S. Access to Conor's Life</h2>
+                  <p className="card_text">Get exclusive access to Conor's career and personal life.</p>
                 </div>
               </div>
             </li>
