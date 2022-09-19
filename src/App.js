@@ -258,14 +258,14 @@ function App() {
       <div className="navContainer">
         <div className="nav-header-hide">
           <div className="logocontainer">
-            
-            <h1 className="ml14" style={{display: "flex", justifyContent: "center"}}>
+
+            <h1 className="ml14" style={{ display: "flex", justifyContent: "center" }}>
               <span className="text-wrapper">
                 <span className="letters">BenNFT</span>
                 <span className="line"></span>
               </span>
             </h1>
-            
+
           </div>
           <div className="site-links">
             <div className="site-link1">
@@ -304,7 +304,7 @@ function App() {
           </div>
           <div className="connectWallet" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             {blockchain.account === "" ||
-              blockchain.smartContract === null ? null : (<p style={{ fontFamily: "Roboto Slab" }}>{truncate(blockchain.account, 5)}</p>)}
+              blockchain.smartContract === null ? null : (<p style={{ fontFamily: "Open Sans" }}>{truncate(blockchain.account, 5)}</p>)}
             <button className="button-49"
               onClick={(e) => {
                 e.preventDefault();
@@ -321,52 +321,58 @@ function App() {
 
       {/*-------------------------ABSOLUTE OBJECTS ABOVE---------------------------- */}
       <div className="item1" id="item1">
-      <div className="open">
-              <span className="cls" style={{zIndex: "1000"}}></span>
-              <span>
-                <ul className="sub-menu ">
-                  <li>
-                    <a href="#item2" title="about">About</a>
-                  </li>
-                  <li>
-                    <a href="#item3" title="skills">Utilities</a>
-                  </li>
-                  <li>
-                    <a href="#faq" title="jobs">FAQ</a>
-                  </li>
-                  <li>
-                    <a href="#item4" title="contact">Buy Now</a>
-                  </li>
-                  <li>
-                    <a href="https://bennft.myshopify.com/" title="contact">Store</a>
-                  </li>
-                </ul>
-              </span>
-              <span className="cls"></span>
-            </div>
-        <div className="heroHeader">
-          <h1 style={{ textAlign: "center", letterSpacing: ".2rem", lineHeight: "1.2" }}>Build a Legacy With<br />Conor Benn</h1>
-
+        <div className="open">
+          <span className="cls" style={{ zIndex: "1000" }}></span>
+          <span>
+            <ul className="sub-menu ">
+              <li>
+                <a href="#item2" title="about">About</a>
+              </li>
+              <li>
+                <a href="#item3" title="skills">Utilities</a>
+              </li>
+              <li>
+                <a href="#faq" title="jobs">FAQ</a>
+              </li>
+              <li>
+                <a href="#item4" title="contact">Buy Now</a>
+              </li>
+              <li>
+                <a href="https://bennft.myshopify.com/" title="contact">Store</a>
+              </li>
+            </ul>
+          </span>
+          <span className="cls"></span>
         </div>
-        <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.1rem", width: "75%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column-reverse" }}>
-          <div id="heroBtnContainer" style={{ width: "30%", padding: "10px 20px", position: "absolute", bottom: "15vh", right: "5vw" }}><a href="#item4" style={{height: "40px"}}><button id="mintHeroBtn" style={{ padding: "10px 20px", background: "rgba(255, 227, 0, 0.08)", border: "solid 1px #ffe300", borderRadius: "15px", color: "#cacaca", fontSize: "25px", fontFamily: "Roboto Slab", fontWeight: "600" }}>Buy Now!</button></a></div>
-          <p id="heroSubText" style={{ width: "50%", letterSpacing: ".1rem", lineHeight: "1.2", fontFamily: "Roboto Slab" }}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
+        <div className="heroContainer">
+          <div className="heroHeader">
+            <h1 style={{ textAlign: "center", letterSpacing: ".2rem", lineHeight: "1.2",fontSize: "3rem" }}>Build a Legacy With<br />Conor Benn</h1>
+          </div>
+          <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.1rem", width: "100%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column" }}>
+            <p id="heroSubText" style={{ width: "70%", letterSpacing: ".1rem", lineHeight: "1.2", fontFamily: "Open Sans" }}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
+            <div id="heroBtnContainer" style={{ width: "40%", padding: "10px 20px", marginTop: "25px" }}>
+              <a href="#item4" style={{ height: "40px" }}>
+                <button id="mintHeroBtn" style={{ width: "100%", padding: "10px 20px", background: "rgba(255, 227, 0, 0.08)", border: "solid 1px #ffe300", borderRadius: "15px", color: "#cacaca", fontSize: "23px", fontFamily: "Open Sans", fontWeight: "600" }}>Buy Now!</button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div id="item2">
         <div className="heroHeader2" >
-          <h1 style={{ textAlign: "left", marginBottom: "10vh", fontWeight: "800" }}>What is BenNFT?</h1>
+          <h1 style={{ textAlign: "left", marginBottom: "10vh", fontWeight: "800",fontSize: "3rem" }}>What is BenNFT?</h1>
           {/* <div className="blueStripe2" style={{ backgroundPosition: "top top" }}>
 
           </div> */}
         </div>
         <div >
-          <p className="heroSubText2" style={{ textShadow: "0px 1px 15px #000", fontFamily: "Roboto Slab", lineHeight: "1.5" }}>
-            BenNFT is a 3D NFT project by undefeated professional boxer Conor Benn. Giving back to
-            Conor’s fans, BenNFT grants holders exclusive access to his career and allows them to build a
-            legacy alongside The Destroyer himself.
-            BenNFT is a collection of 5,555 NFTs that utilises the technology to give you unmatched
-            opportunities and benefits, including but not limited to: Fight Tickets, Press Conference Access,
+          <p className="heroSubText2" style={{ textShadow: "0px 1px 15px #000", fontFamily: "Open Sans", lineHeight: "1.5" }}>
+            BenNFT is a 3D NFT project by undefeated professional boxer <span style={{color: "#ffe300"}}>Conor Benn.</span> Giving back to
+            Conors fans, BenNFT grants holders <span style={{color: "#ffe300"}}>exclusive access to his career </span>and allows them to build a
+            legacy alongside The Destroyer himself.<br />
+            BenNFT is a collection of <b style={{textDecoration: "underline",color: "#ffe300"}}>5,555 NFTs</b> that utilises blockchain technology to give you unmatched
+            opportunities and benefits. <br /><br />
+            Including but not limited to: Fight Tickets, Press Conference Access,
             Meet & Greets, Live Training Sessions, Signed Memorabilia, 1-on-1 Calls, Virtual Hangouts, and
             Behind-The-Scenes access to Conor’s life.
           </p>
@@ -374,7 +380,7 @@ function App() {
       </div>
       <div id="item3">
         <div className="cardgrid_container">
-          <h1 className="heroHeader" style={{ textAlign: "center", fontSize: "2.2rem", margin: "50px 25px" }}>Connecting Conor To His Fans </h1>
+          <h1 className="heroHeader" style={{ textAlign: "center", fontSize: "3rem", margin: "50px 25px" }}>Connecting Conor To His Fans </h1>
           {/* <p className="heroSubText" style={{ textAlign: "center", fontSize: "1.2rem", margin: "17.5px 25px" }}>-Exclusive access to his career-</p> */}
           <ul className="cards">
             <li className="cards_item">
@@ -495,6 +501,7 @@ function App() {
                 </s.TextTitle> */}
 
           <>
+          <h1 style={{ textAlign: "center", marginBottom: "10vh", fontWeight: "800", fontFamily: "Orbitron", fontSize: "3rem" }}>Buy Here</h1>
             <div className="supplyContainer">
 
               <div className="supplyLeft">
@@ -520,7 +527,7 @@ function App() {
                   style={{
                     textAlign: "center",
                     color: "var(--accent-text)",
-                    fontFamily: "Roboto Slab"
+                    fontFamily: "Open Sans"
                   }}
                 >
                   Error: Connect to the {CONFIG.NETWORK.NAME} network

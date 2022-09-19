@@ -125,12 +125,24 @@ q:after {
   content: "";
   content: none;
 }
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+.accordion::after {
+  transform: all .3s;
+  content: "\f107";
+  color: #ffe300;
+  right: -10px;
+  position: relative;
+  font-family: "FontAwesome"
+}
+
+.active::after {
+  content: "\f106" !important;
+}
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 @font-face {
   font-family: "coder";
   src: local("coder"), url(font.woff) format("woff");
@@ -138,7 +150,7 @@ table {
 
 body {
   margin: 0;
-  font-family: "Roboto Slab", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  font-family: "Open Sans", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -150,12 +162,12 @@ body {
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 
 html,
 body,
 section.horizontal {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 section {
@@ -171,6 +183,13 @@ section:nth-of-type(odd) {
 
 section:nth-of-type(even) {
   background-color: #000;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45vw;
 }
 
 .fancy {
@@ -464,8 +483,8 @@ section:nth-of-type(even) {
   padding: 18px;
   width: 100%;
   text-align: center;
-  font-family: Roboto Slab;
-  font-size: 1.5rem;
+  font-family: Orbitron;
+  font-size: 1.6rem;
   border: solid 0px #14181b;
   outline: none;
 }
@@ -494,7 +513,7 @@ section:nth-of-type(even) {
 }
 
 .panel p {
-  font-family: Roboto Slab;
+  font-family: Open Sans;
   padding: 40px 40px;
   line-height: 1.1;
 }
@@ -517,14 +536,14 @@ section:nth-of-type(even) {
 .item1 {
   width: 100vw;
   height: 100vh;
-  background: url("./home.png") no-repeat center center;
+  background: url("./homeAlt.png") no-repeat center center;
   transition: all 1.8s;
   background-size: cover !important;
   padding: 160px 140px;
   opacity: 0.1;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
   flex-direction: column;
   border: solid 2px #000;
   z-index: 20;
@@ -1036,7 +1055,7 @@ button:hover {
   line-height: 1.5;
   margin-top: 1.25rem;
   font-weight: 400;
-  font-family: Roboto Slab;
+  font-family: Open Sans;
   text-align: center;
 }
 
@@ -1115,7 +1134,7 @@ button:hover {
 .flag {
   position: relative;
   display: inline;
-  background: rgb(248, 248, 248);
+  background: #ffe300;
   padding: 6px 10px;
   border-radius: 5px;
   font-family: Orbitron;
@@ -1164,7 +1183,7 @@ button:hover {
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-left-color: rgb(248, 248, 248);
+  border-left-color: #ffe300;
   border-width: 8px;
   pointer-events: none;
 }
@@ -1178,7 +1197,7 @@ button:hover {
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-right-color: rgb(248, 248, 248);
+  border-right-color: #ffe300;
   border-width: 8px;
   pointer-events: none;
 }
@@ -1205,7 +1224,7 @@ button:hover {
   font-family: Orbitron;
   display: inline-block;
   padding: 4px 6px;
-  font-weight: 900;
+  font-weight: 9  00;
   background: rgb(248, 248, 248);
 }
 
@@ -1216,7 +1235,7 @@ button:hover {
   border-radius: 15px;
   margin: 20px 10px;
   font-weight: medium;
-  font-family: 'Roboto Slab';
+  font-family: 'Open Sans';
 }
 
 .direction-r .desc {
@@ -1384,7 +1403,7 @@ button:hover {
 .heroSubText {
   margin-top: 25px;
   color: white;
-  font-family: Orbitron;
+  font-family: "Open Sans";
   font-size: 28px;
   opacity: 0;
 }
@@ -1711,7 +1730,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   width: 100%;
-  font-family: Roboto Slab;
+  font-family: Open Sans;
   display: block;
   float: left;
   line-height: 40px;
@@ -2192,6 +2211,20 @@ a {
 }
 
 @media (max-width: 840px) {
+
+  #accordionContainer {
+    width: 80vw !important;
+  }
+  #item3 {
+    padding: 50px 15px !important;
+  }
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
   #timelineContainer {
     height: auto;
     background: transparent;
@@ -2204,7 +2237,7 @@ a {
     height: auto;
     z-index: 10;
     min-height: 110vh;
-    background: url("./faqMobile.png") center top no-repeat;
+    background: url("./utilityMobile.png") center top no-repeat;
     background-size: cover !important;
   }
 
@@ -2217,7 +2250,7 @@ a {
   }
 
   #item3 {
-    background: url("./faqMobile.png") no-repeat left bottom !important;
+    background: url("./utilityMobile.png") no-repeat center bottom !important;
     background-size: cover !important;
   }
   #item4 {
@@ -2278,7 +2311,12 @@ a {
   }
 
   .item1 {
+    background: url("./home.png") no-repeat center center;
     padding: 150px 40px;
+    justify-content: flex-start !important;
+  }
+  .heroHeader {
+    margin-bottom: 10px !important;
   }
 
   #item2 {
@@ -2451,7 +2489,6 @@ a {
   #item2 {
     height: 140vh !important;
     background-size: cover !important;
-    background-position: -460px 0px !important;
   }
 }
 

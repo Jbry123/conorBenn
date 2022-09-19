@@ -18,6 +18,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -104,32 +105,34 @@
 // initialize last scroll position
 let lastY = $el.scrollTop();
     
-setInterval(function () {
-  let currY = $el.scrollTop();
+
+// STICKY HEADER CODE
+// setInterval(function () {
+//   let currY = $el.scrollTop();
         
-        // determine current scroll direction
-        let y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
+//         // determine current scroll direction
+//         let y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
     
-        // do something here...
-        console.log(currY);
-        if (y == 'down') {
-          // $(".nav-header-hide").removeClass( "upScroll" );
-          // $(".nav-header-hide").addClass( "downScroll" );
-          $(".nav-header-hide").slideUp(400);
-        } else if ( y == 'up') {
-          // $(".nav-header-hide").removeClass( "downScroll" );
-          // $(".nav-header-hide").addClass( "upScroll" );
-          $(".nav-header-hide").slideDown(400);
-        };
+//         // do something here...
+//         console.log(currY);
+//         if (y == 'down') {
+//           // $(".nav-header-hide").removeClass( "upScroll" );
+//           // $(".nav-header-hide").addClass( "downScroll" );
+//           $(".nav-header-hide").slideUp(400);
+//         } else if ( y == 'up') {
+//           // $(".nav-header-hide").removeClass( "downScroll" );
+//           // $(".nav-header-hide").addClass( "upScroll" );
+//           $(".nav-header-hide").slideDown(400);
+//         };
     
-        // update last scroll position to current position
-        lastY = currY;
-        if (currY < 1 & currY >= 0 ) {
-          $(".nav-header-hide").slideDown(400);
-          return;
-        };
-        return;
-}, 400);
+//         // update last scroll position to current position
+//         lastY = currY;
+//         if (currY < 1 & currY >= 0 ) {
+//           $(".nav-header-hide").slideDown(400);
+//           return;
+//         };
+//         return;
+// }, 400);
 
 
     }, 2000);
