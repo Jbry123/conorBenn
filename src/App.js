@@ -635,7 +635,7 @@ function App() {
 
                   </div>
                 </s.Container>
-                <div className="fancy">
+                <div className="fancy" style={{margin: "30px 25px"}}>
                   <span>Ends In:</span>
                 </div>
                 <div id="countdown"></div>
@@ -743,15 +743,13 @@ function App() {
                   >
                     {claimingNft ? "MINTING" : "Buy With Credit Card"}
                   </StyledButton>
-                  <div className="heroSubText" style={{ marginTop: "42.5vh", padding: "10px 0px", position: "absolute", opacity: "1" }}>
-
-                    <div id="countdown"></div>
-                  </div>
+                  
 
                 </s.Container>
-                <div className="fancy">
+                <div className="fancy" style={{margin: "30px 25px"}}>
                   <span>Ends In:</span>
                 </div>
+                <div id="countdown"></div>
               </>
             )}
 
