@@ -290,10 +290,15 @@ textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='let
 
 
   var acc = document.getElementsByClassName("accordion");
-var i;
+  var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
+    $( ".accordion" ).each(function() {
+      var panel = this.nextElementSibling;
+      panel.style.maxHeight = null;
+});
+    $('.panel').slideUp;
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
@@ -303,7 +308,6 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
 
 });
   </script>

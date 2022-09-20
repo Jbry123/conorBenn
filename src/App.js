@@ -864,7 +864,7 @@ function App() {
             <div className="direction-l">
               <div className="flag-wrapper">
                 <span className="flag">50% Minted</span>
-                <span className="time-wrapper"><span className="time">Community Content</span></span>
+                <span className="time-wrapper"><span className="time">Content</span></span>
               </div>
               <div className="desc">AMA with Conor Benn<br /><br />BTS access to watch training session</div>
             </div>
