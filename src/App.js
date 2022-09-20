@@ -769,7 +769,7 @@ function App() {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ marginBottom: "50px" }} id="accordionContainer">
 
-            <button className="accordion">What is an NFT? And why use them for this?</button>
+            <button className="accordion active">What is an NFT? And why use them for this?</button>
             <div className="panel">
               <p>NFTs, simply put, are a small part of ownership verification, for the distributed internet known as the blockchain.
                 they can be bought and sold based on what people are willing to give for the value locked into them, that can be: membership, giveaways, purchases, investments, anything.

@@ -295,16 +295,21 @@ textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='let
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     $( ".accordion" ).each(function() {
-      var panel = this.nextElementSibling;
-      panel.style.maxHeight = null;
+      var panel1 = this.nextElementSibling;
+      panel1.style.maxHeight = 0;
 });
-    $('.panel').slideUp;
     this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
+    var panel2 = this.nextElementSibling;
+    if (panel2.style.maxHeight = "0px") {
+      console.log("hello2");
+      console.log(panel2.style.maxHeight);
+      panel2.style.maxHeight = panel2.scrollHeight + "px";
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+
+      console.log(panel2.style.maxHeight);
+      panel2.style.maxHeight = null;
+      return;
+      
     }
   });
 }

@@ -406,6 +406,9 @@ section:nth-of-type(even) {
   background-color: hsl(205, 6%, 19%);
 }
 
+.active {
+}
+
 #accordionContainer {
   width: 60vw;
   max-width: 800px;
@@ -2158,7 +2161,7 @@ a {
   #faq {
     padding: 100px 125px;
     box-shadow: 0px 10px 22px -9px #cacaca;
-    height: auto;
+    height: auto !important;
     z-index: 10;
     min-height: 110vh;
     background: url("./utilityMobile.png") center top no-repeat;
