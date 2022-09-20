@@ -348,9 +348,9 @@ function App() {
         </div>
         <div className="heroContainer">
           <div className="heroHeader">
-            <h1 style={{ textAlign: "center", letterSpacing: ".2rem", lineHeight: "1.2",fontSize: "3rem" }}>Build a Legacy With<br />Conor Benn</h1>
+            <h1 style={{ textAlign: "center", letterSpacing: ".2rem", lineHeight: "1.2",fontSize: "2.3rem" }}>Build a Legacy With<br />Conor Benn</h1>
           </div>
-          <div className="heroSubText" style={{ marginTop: "15px", textAlign: "center", fontSize: "1.1rem", width: "100%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column" }}>
+          <div className="heroSubText" style={{ marginTop: "35px", textAlign: "center", fontSize: "1.1rem", width: "100%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column" }}>
             <p id="heroSubText" style={{ width: "70%", letterSpacing: ".1rem", lineHeight: "1.2", fontFamily: "Open Sans" }}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
             <div id="heroBtnContainer" style={{ width: "40%", padding: "10px 20px", marginTop: "25px" }}>
               <a href="#item4" style={{ height: "40px" }}>
@@ -362,7 +362,7 @@ function App() {
       </div>
       <div id="item2">
         <div className="heroHeader2" >
-          <h1 style={{ textAlign: "left", marginBottom: "1vh", fontWeight: "800",fontSize: "3rem" }}>What is BenNFT?</h1>
+          <h1 style={{ textAlign: "left", marginBottom: "1vh", fontWeight: "800",fontSize: "2.3rem", }}>What is BenNFT?</h1>
           {/* <div className="blueStripe2" style={{ backgroundPosition: "top top" }}>
 
           </div> */}
@@ -387,7 +387,7 @@ function App() {
       </div>
       <div id="item3">
         <div className="cardgrid_container">
-          <h1 className="heroHeader" style={{ textAlign: "center", fontSize: "3rem", margin: "50px 25px" }}>Connecting Conor To His Fans </h1>
+          <h1 className="heroHeader" style={{ textAlign: "center", fontSize: "2.3rem", margin: "50px 25px" }}>Connecting Conor To His Fans </h1>
           {/* <p className="heroSubText" style={{ textAlign: "center", fontSize: "1.2rem", margin: "17.5px 25px" }}>-Exclusive access to his career-</p> */}
           <ul className="cards">
             <li className="cards_item">
@@ -508,7 +508,7 @@ function App() {
                 </s.TextTitle> */}
 
           <>
-          <h1 style={{ textAlign: "center", marginBottom: "10vh", fontWeight: "800", fontFamily: "Orbitron", fontSize: "3rem" }}>Buy Here</h1>
+          <h1 style={{ textAlign: "center", marginBottom: "10vh", fontWeight: "800", fontFamily: "Orbitron", fontSize: "2.3rem", color: "#ffe300" }}>Buy Here</h1>
             <div className="supplyContainer">
 
               <div className="supplyLeft">
@@ -833,7 +833,7 @@ function App() {
       </div>
       {/* // TIMELINE START */}
       <div id="timelineContainer">
-        <h1 style={{ textAlign: "center", margin: "50px", color: "#cacaca", fontSize: "35px", fontFamily: "Orbitron" }}>The BenNFT Roadmap</h1>
+        <h1 style={{ textAlign: "center", margin: "50px", color: "#cacaca", fontSize: "35px", fontFamily: "Orbitron", fontWeight: "900" }}>The BenNFT Roadmap</h1>
         <ul className="timeline">
 
           <li>

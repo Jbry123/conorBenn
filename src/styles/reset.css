@@ -236,67 +236,10 @@ section:nth-of-type(even) {
   clip-path: var(--slice-0);
 }
 
-.button-49:hover:after {
-  animation: 1.5s glitch;
-  animation-timing-function: steps(3, end);
+.button-49:hover {
+  transform: scale(.8);
 }
 
-@keyframes glitch {
-  0% {
-    clip-path: var(--slice-1);
-    transform: translate(-20px, -10px);
-  }
-
-  10% {
-    clip-path: var(--slice-3);
-    transform: translate(10px, 10px);
-  }
-
-  20% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 10px);
-  }
-
-  30% {
-    clip-path: var(--slice-3);
-    transform: translate(0px, 5px);
-  }
-
-  40% {
-    clip-path: var(--slice-2);
-    transform: translate(-5px, 0px);
-  }
-
-  50% {
-    clip-path: var(--slice-3);
-    transform: translate(5px, 0px);
-  }
-
-  60% {
-    clip-path: var(--slice-4);
-    transform: translate(5px, 10px);
-  }
-
-  70% {
-    clip-path: var(--slice-2);
-    transform: translate(-10px, 10px);
-  }
-
-  80% {
-    clip-path: var(--slice-5);
-    transform: translate(20px, -10px);
-  }
-
-  90% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 0px);
-  }
-
-  100% {
-    clip-path: var(--slice-1);
-    transform: translate(0);
-  }
-}
 
 
 
@@ -528,7 +471,7 @@ button:hover {
 
 #item2 {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background: url("./whatis.png") no-repeat right bottom;
   animation: all 11.8s;
   background-size: cover;
@@ -576,9 +519,9 @@ button:hover {
 #faq {
   padding: 100px 125px;
   box-shadow: 0px 10px 22px -9px #cacaca;
-  height: auto;
+  height: 200vh;
   z-index: 10;
-  min-height: 110vh;
+  min-height: 140vh;
   background: url("./faq.png") center bottom no-repeat;
   background-size: cover !important;
 }
@@ -917,7 +860,8 @@ button:hover {
 
 .cardgrid_container h1 {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 900;
+  letter-spacing: .2rem;
   text-align: center;
 }
 
@@ -1014,6 +958,7 @@ button:hover {
   text-transform: capitalize;
   margin: 0px;
   font-family: 'Orbitron';
+  letter-spacing: .2rem;
   text-align: center;
 }
 
@@ -1105,6 +1050,7 @@ button:hover {
   background: #ffe300;
   padding: 6px 10px;
   border-radius: 5px;
+  letter-spacing: .2rem;
   font-family: Orbitron;
   font-weight: 900;
   text-align: left;
@@ -1192,6 +1138,7 @@ button:hover {
   font-family: Orbitron;
   display: inline-block;
   padding: 4px 6px;
+  letter-spacing: .2rem;
   font-weight: 9  00;
   background: rgb(248, 248, 248);
 }
@@ -1322,10 +1269,11 @@ button:hover {
 /* TIMELINE END */
 
 .heroHeader {
-  font-size: 40px;
+  font-size:30px;
   color: white;
   font-weight: 900;
   font-family: Orbitron;
+  letter-spacing: .2rem;
   opacity: 0;
 }
 
@@ -1343,6 +1291,7 @@ button:hover {
   font-family: Orbitron;
   opacity: 1;
   text-align: left;
+  letter-spacing: .2rem;
   width: 60vw;
 }
 
@@ -1381,7 +1330,9 @@ button:hover {
   margin: 20px 50px;
   color: white;
   font-family: Orbitron;
-  font-size: 18px;
+  letter-spacing: .2rem;
+  font-weight: 900;
+  font-size: 13px;
   opacity: 1;
   width: 60vw;
 
@@ -1479,7 +1430,7 @@ button:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background: rgb(0, 0, 0, .5);
+  background: rgb(0, 0, 0, .8);
   border-radius: 20px;
   color: white;
   align-items: center;
@@ -2033,7 +1984,6 @@ text {
 
   .heroHeader {
     margin: 40px 0px !important;
-    font-size: 28px !important;
     width: 100% !important;
   }
 
@@ -2414,7 +2364,10 @@ a {
 
   .heroHeader {
     margin-top: 15px !important;
-    font-size: 28px !important;
+  }
+
+  .heroHeader h1 {
+    font-size: 23px !important;
   }
 
   .item1 {
