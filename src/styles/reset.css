@@ -2515,3 +2515,21 @@ a {
   left: 100%;
   margin-left: 50px;
 }
+
+.nftImage1 {
+  width: 50%;
+  max-width: 220px;
+  height: auto;
+  margin: 25px;
+  border: solid 2px #6b601fad;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 5px #a89530;
+}
+.nftImage2 {
+  width: 50%;
+  max-width: 220px;
+  margin: 25px;
+  border: solid 2px #001050ed;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 5px #001877;;
+}

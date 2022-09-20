@@ -14,6 +14,8 @@ import robe from "./styles/robe.png";
 import plotter from "./styles/plotter.png";
 import press from "./styles/lectern.png";
 import sessions from "./styles/sand-bag.png";
+import nftImage1 from "./styles/nftimage1.png";
+import nftImage2 from "./styles/nftimage2.png";
 import { Collapse } from 'antd';
 import axios from 'axios';
 import Web3 from "web3";
@@ -360,22 +362,27 @@ function App() {
       </div>
       <div id="item2">
         <div className="heroHeader2" >
-          <h1 style={{ textAlign: "left", marginBottom: "10vh", fontWeight: "800",fontSize: "3rem" }}>What is BenNFT?</h1>
+          <h1 style={{ textAlign: "left", marginBottom: "1vh", fontWeight: "800",fontSize: "3rem" }}>What is BenNFT?</h1>
           {/* <div className="blueStripe2" style={{ backgroundPosition: "top top" }}>
 
           </div> */}
         </div>
-        <div >
+        <div style={{display: "flex", justifyContent: "center", flexDirection: "column"}} >
           <p className="heroSubText2" style={{ textShadow: "0px 1px 15px #000", fontFamily: "Open Sans", lineHeight: "1.5" }}>
             BenNFT is a 3D NFT project by undefeated professional boxer <span style={{color: "#ffe300"}}>Conor Benn.</span> Giving back to
             Conors fans, BenNFT grants holders <span style={{color: "#ffe300"}}>exclusive access to his career </span>and allows them to build a
-            legacy alongside The Destroyer himself.<br />
+            legacy alongside The Destroyer himself.<br /><br />
             BenNFT is a collection of <b style={{textDecoration: "underline",color: "#ffe300"}}>5,555 NFTs</b> that utilises blockchain technology to give you unmatched
             opportunities and benefits. <br /><br />
             Including but not limited to: Fight Tickets, Press Conference Access,
             Meet & Greets, Live Training Sessions, Signed Memorabilia, 1-on-1 Calls, Virtual Hangouts, and
             Behind-The-Scenes access to Conor’s life.
+            <div style={{display: "flex", justifyContent: "center", flexDirection: "row", width: "100%"}} >
+              <img className="nftImage1" src={nftImage1}></img>
+              <img className="nftImage2" src={nftImage2}></img>
+            </div>
           </p>
+          
         </div>
       </div>
       <div id="item3">
