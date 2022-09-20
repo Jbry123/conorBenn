@@ -739,6 +739,7 @@ button:hover {
   font-size: 13px;
   font-weight: 800;
   font-family: Orbitron;
+  box-shadow: 0px 1px 5px 3px #ffe300ad;
 }
 
 #buyButton2 {
@@ -752,6 +753,11 @@ button:hover {
   font-size: 13px;
   font-weight: 800;
   font-family: Orbitron;
+  box-shadow: 0px 1px 5px 3px #ffe300ad;
+}
+
+#buyButton1:hover, #buyButton2:hover {
+  transform: scale(1.1);
 }
 
 .supplyContainer {

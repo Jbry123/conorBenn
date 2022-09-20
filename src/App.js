@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
@@ -477,7 +478,7 @@ function App() {
                 <div className="card_image"><img src={boxingShorts} /></div>
                 <div className="card_content">
                   <h2 className="card_title">Monthly Prizes</h2>
-                  <p className="card_text">Cash prizes and other surprises exclusively for BENNFT holders, every month.</p>
+                  <p className="card_text">Cash prizes and other surprises exclusively for BenNFT holders, every month.</p>
                 </div>
               </div>
             </li>
@@ -628,16 +629,13 @@ function App() {
                     {claimingNft ? "MINTING" : "Buy With Wallet"}
                   </StyledButton>
 
-                  <StyledButton id="buyButton2"
-                    disabled={claimingNft ? 1 : 0}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      claimNFTs();
-                      getData();
-                    }}
-                  >
-                    {claimingNft ? "MINTING" : "Buy With Credit Card"}
-                  </StyledButton>
+                  <CrossmintPayButton id="buyButton2" style={{ borderRadius: "30px" }}
+                  collectionTitle="MonsterBuds x LittyUp"
+                  collectionDescription="Snoop has partnered with LittyUp and MonsterBuds to build positive interactions between all of our fans and across many aspects including IRL, online, gaming, and music."
+                  collectionPhoto="https://gateway.pinata.cloud/ipfs/QmepxrN2HsYmQz6RqtSyPDoy2fFpA9CVBkR44aTpeRNMo4/snoop_higher_conciousness.png"
+                  clientId="a012ba57-a72d-4497-86ef-85efd51a5b6e"
+                  mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify(mintAmount * 0.065), "quantity": mintAmount }}
+                />
                   <div className="heroSubText" style={{ marginTop: "30.5vh", padding: "10px 0px", position: "absolute" }}>
 
                   </div>
@@ -740,16 +738,13 @@ function App() {
                     {claimingNft ? "MINTING" : "Buy With Wallet"}
                   </StyledButton>
 
-                  <StyledButton id="buyButton2"
-                    disabled={claimingNft ? 1 : 0}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      claimNFTs();
-                      getData();
-                    }}
-                  >
-                    {claimingNft ? "MINTING" : "Buy With Credit Card"}
-                  </StyledButton>
+                  <CrossmintPayButton id="buyButton2" style={{ borderRadius: "30px" }}
+                  collectionTitle="MonsterBuds x LittyUp"
+                  collectionDescription="Snoop has partnered with LittyUp and MonsterBuds to build positive interactions between all of our fans and across many aspects including IRL, online, gaming, and music."
+                  collectionPhoto="https://gateway.pinata.cloud/ipfs/QmepxrN2HsYmQz6RqtSyPDoy2fFpA9CVBkR44aTpeRNMo4/snoop_higher_conciousness.png"
+                  clientId="a012ba57-a72d-4497-86ef-85efd51a5b6e"
+                  mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify(mintAmount * 0.065), "quantity": mintAmount }}
+                />
                   
 
                 </s.Container>
