@@ -270,7 +270,7 @@ section:nth-of-type(even) {
 .sk-cube-grid .sk-cube {
   width: 33%;
   height: 33%;
-  background-color: #CC0000;
+  background-color: #ffe300ad;
   float: left;
   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
   animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
@@ -1354,9 +1354,15 @@ button:hover {
   font-family: Orbitron;
 }
 
+.social-mobile {
+  display: block !important;
+  z-index: 6000 !important;
+  position: relative !important;
+}
+
 .site-links,
 .socials {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -1967,10 +1973,7 @@ text {
     padding: 200px 0 0 0px !important;
   }
 
-  .site-links,
-  .socials {
-    display: none;
-  }
+  
 
   .blueStripe1 {
     display: none;
@@ -2244,7 +2247,7 @@ a {
   }
 
   #heroBtnContainer {
-    width: 100% !important;
+    width: 70% !important;
   }
 
   .button-49,
@@ -2376,12 +2379,25 @@ a {
     width: 100% !important;
     font-size: 16px !important;
   }
+
+  .socials {
+    display: none !important;
+  }
 }
 
 @media (max-width: 391px) {
+
+  .nftImage1, .nftImage2 {
+    margin: 12px !important;
+    width: 45% !important;
+  }
   #item3 {
     height: 550vh !important;
 
+  }
+
+  .heroSubText2{
+    width: 75VW !important;
   }
 
   #item4 {
@@ -2453,7 +2469,7 @@ a {
 
 
 .fancy {
-  margin: 50px 25px 25px 0px !important;
+  margin: 50px 5px !important;
   line-height: 0.1;
   text-align: center;
 }

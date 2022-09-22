@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0xcEEa3A72A69b52B825e874121F0c44732c9C38c1",
-  "SCAN_LINK": "https://etherscan.io/address/0xcEEa3A72A69b52B825e874121F0c44732c9C38c1",
+  "CONTRACT_ADDRESS": "0xc83Cf1694bc20b917C969FB4A2571b7d8ef625Aa",
+  "SCAN_LINK": "https://etherscan.io/address/0xc83Cf1694bc20b917C969FB4A2571b7d8ef625Aa",
   "NETWORK": {
-    "NAME": "Goerli",
+    "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 5
+    "ID": 1
   },
   "NFT_NAME": "BenNFT",
   "SYMBOL": "BNFT",
