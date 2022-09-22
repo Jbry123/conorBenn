@@ -930,7 +930,6 @@ function App() {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-        AccessControlAllowOrigin: "*"
       },
     });
     let price = await priceResponse.json();
