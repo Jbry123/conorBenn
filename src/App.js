@@ -145,7 +145,7 @@ function App() {
     DISPLAY_COST: 0.15,
     GAS_LIMIT: 120000,
     MARKETPLACE: "opensea",
-    MARKETPLACE_LINK: "https://opensea.io/collection/BenNFT-official",
+    MARKETPLACE_LINK: "https://opensea.io/collection/BenNFT-V2",
     SHOW_BACKGROUND: false,
   });
 
@@ -852,8 +852,8 @@ function App() {
       "0x10af3c0b921684a1c335ce4ec35c3deff339d1a1"];
     let cost = ethPriceGBP;
     let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = String(ethPriceGBP * mintAmount);
-    let totalGasLimit = String(gasLimit * mintAmount);
+    let totalCostWei = String((ethPriceGBP * mintAmount));
+    let totalGasLimit = String((gasLimit * mintAmount));
 
     console.log("Cost: ", totalCostWei);
     console.log("Gas limit: ", totalGasLimit);
