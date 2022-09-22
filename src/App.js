@@ -279,22 +279,22 @@ function App() {
               <a href="#item3">Utility</a>
             </div>
             <div className="site-link1">
-              <a href="#faq">FAQ</a>
+              <a href="#item4">Buy Now</a>
             </div>
             <div className="site-link1">
-              <a href="#item4">Buy Now</a>
+              <a href="#faq">FAQ</a>
             </div>
             <div className="site-link1">
               <a href="https://bennft.myshopify.com/">Store</a>
             </div>
           </div>
           <div className="socials">
-            <a href="https://instagram.com/BenNFT">
+            <a href="https://www.instagram.com/BenNFTofficial/">
               <div className="social-link1">
 
               </div>
             </a>
-            <a href="https://twitter.com/BenNFT">
+            <a href="https://twitter.com/BenNFTofficial">
               <div className="social-link2">
 
               </div>
@@ -396,7 +396,7 @@ function App() {
                 <div className="card_image"><img src={ticket} /></div>
                 <div className="card_content">
                   <h2 className="card_title">Fight Tickets</h2>
-                  <p className="card_text">Ringside and standard seats for NFT holders on upcoming fights </p>
+                  <p className="card_text">Ringside and standard seats for NFT holders. </p>
                 </div>
               </div>
             </li>
@@ -404,7 +404,7 @@ function App() {
               <div className="card">
                 <div className="card_image"><img src={press} /></div>
                 <div className="card_content">
-                  <h2 className="card_title">Press Conference Access</h2>
+                  <h2 className="card_title">Press Conferences</h2>
                   <p className="card_text">Exclusive access to upcoming fight press conferences. </p>
                 </div>
               </div>
@@ -441,8 +441,8 @@ function App() {
               <div className="card">
                 <div className="card_image"><img src={plotter} /></div>
                 <div className="card_content">
-                  <h2 className="card_title">1-on-1 Calls</h2>
-                  <p className="card_text">50 prints up for grabs from the world famouse artits, The Connor Brothers</p>
+                  <h2 className="card_title">Art Prints</h2>
+                  <p className="card_text">50 prints up for grabs from the world famous artits, The Connor Brothers</p>
                 </div>
               </div>
             </li>
@@ -469,7 +469,7 @@ function App() {
                 <div className="card_image"><img src={plotter} /></div>
                 <div className="card_content">
                   <h2 className="card_title">IRL Events</h2>
-                  <p className="card_text">Special experiences, q&a sessions & more only for Holders.</p>
+                  <p className="card_text">Special experiences, Q&A sessions & more only for Holders.</p>
                 </div>
               </div>
             </li>
@@ -525,7 +525,7 @@ function App() {
                 Price
               </div>
               <div className="quantityRight">
-                £ 200 GBP
+                £200
               </div>
             </div>
             {blockchain.account === "" ||
@@ -622,6 +622,11 @@ function App() {
                     disabled={claimingNft ? 1 : 0}
                     onClick={(e) => {
                       e.preventDefault();
+                      if (!blockchain.account) {
+                        dispatch(connect());
+                        getData();
+                        return;
+                      }
                       claimNFTs();
                       getData();
                     }}
@@ -769,7 +774,7 @@ function App() {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ marginBottom: "50px" }} id="accordionContainer">
 
-            <button className="accordion active">What is an NFT? And why use them for this?</button>
+            <button className="accordion">What is an NFT? And why use them for this?</button>
             <div className="panel">
               <p>NFTs, simply put, are a small part of ownership verification, for the distributed internet known as the blockchain.
                 they can be bought and sold based on what people are willing to give for the value locked into them, that can be: membership, giveaways, purchases, investments, anything.
@@ -928,7 +933,6 @@ function App() {
                 <ul className="footer-links">
                   <li><a href="https://discord.gg/bennft">Talk to us on discord!</a></li>
                   <li><a href="https://www.instagram.com/conorbennofficial/">Conor's Instagram</a></li>
-                  <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
                 </ul>
               </div>
 

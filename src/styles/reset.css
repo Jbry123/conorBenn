@@ -847,7 +847,7 @@ button:hover {
   flex-direction: column !important;
   justify-content: center;
   width: 33.33%;
-  margin: 25px;
+  margin: 15px;
 }
 
 #countdown div {
@@ -1304,27 +1304,6 @@ button:hover {
   width: 60vw;
 }
 
-.blueStripe1 {
-  background: url("./goldBar.png") no-repeat left bottom;
-  width: 78vw;
-  height: 28px;
-  position: absolute;
-  bottom: 0;
-  z-index: 20;
-  background-size: contain;
-  left: 0;
-}
-
-.blueStripe2 {
-  background: url("./Group\ 748.png") no-repeat right bottom;
-  width: 100vw;
-  height: 49vh;
-  position: absolute;
-  bottom: 0;
-  z-index: 20;
-  background-size: contain;
-  left: 0;
-}
 
 .heroSubText {
   margin-top: 25px;
