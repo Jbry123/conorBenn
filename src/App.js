@@ -151,7 +151,7 @@ function App() {
   const claimNFTs = () => {
     let cost = ethPriceGBP;
     let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = String(cost * mintAmount);
+    let totalCostWei = String(ethPriceGBP * mintAmount);
     let totalGasLimit = String(gasLimit * mintAmount);
 
     console.log("Cost: ", totalCostWei);
@@ -164,7 +164,7 @@ function App() {
     // signature = S2Atx0qfYi32bleF
     blockchain.smartContract.methods
       //change params in mint to number of mints first, then the signature
-      .mint(mintAmount, signature)
+      .safeMint(blockchain.account, mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -442,7 +442,7 @@ function App() {
                 <div className="card_image"><img src={plotter} /></div>
                 <div className="card_content">
                   <h2 className="card_title">Art Prints</h2>
-                  <p className="card_text">50 prints up for grabs from the world famous artits, The Connor Brothers</p>
+                  <p className="card_text">50 Limited Edition Art Prints up for grabs from the world famous artists, The Connor Brothers</p>
                 </div>
               </div>
             </li>
@@ -450,7 +450,7 @@ function App() {
               <div className="card">
                 <div className="card_image"><img src={robe} /></div>
                 <div className="card_content">
-                  <h2 className="card_title">Virtual Hangouts</h2>
+                  <h2 className="card_title">Robe Giveaway</h2>
                   <p className="card_text">1 lucky token holder will win Conor’s actual ring walk robe from an upcoming fight</p>
                 </div>
               </div>
@@ -634,7 +634,7 @@ function App() {
                     {claimingNft ? "MINTING" : "Buy With Wallet"}
                   </StyledButton>
 
-                  <CrossmintPayButton id="buyButton2" style={{ borderRadius: "30px" }}
+                  <CrossmintPayButton disabled id="buyButton2" style={{ borderRadius: "30px", color: "#cacaca" }}
                   collectionTitle="MonsterBuds x LittyUp"
                   collectionDescription="Snoop has partnered with LittyUp and MonsterBuds to build positive interactions between all of our fans and across many aspects including IRL, online, gaming, and music."
                   collectionPhoto="https://gateway.pinata.cloud/ipfs/QmepxrN2HsYmQz6RqtSyPDoy2fFpA9CVBkR44aTpeRNMo4/snoop_higher_conciousness.png"
@@ -652,14 +652,7 @@ function App() {
 
                 {blockchain.errorMsg !== "" ? (
                   <>
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                        color: "var(--accent-text)",
-                      }}
-                    >
-                      {blockchain.errorMsg}
-                    </s.TextDescription>
+                    
                   </>
                 ) : null}
               </s.Container>
@@ -743,7 +736,7 @@ function App() {
                     {claimingNft ? "MINTING" : "Buy With Wallet"}
                   </StyledButton>
 
-                  <CrossmintPayButton id="buyButton2" style={{ borderRadius: "30px" }}
+                  <CrossmintPayButton id="buyButton2" disabled style={{ borderRadius: "30px" }}
                   collectionTitle="MonsterBuds x LittyUp"
                   collectionDescription="Snoop has partnered with LittyUp and MonsterBuds to build positive interactions between all of our fans and across many aspects including IRL, online, gaming, and music."
                   collectionPhoto="https://gateway.pinata.cloud/ipfs/QmepxrN2HsYmQz6RqtSyPDoy2fFpA9CVBkR44aTpeRNMo4/snoop_higher_conciousness.png"

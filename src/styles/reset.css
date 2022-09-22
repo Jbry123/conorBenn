@@ -125,7 +125,9 @@ q:after {
   content: "";
   content: none;
 }
+
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
 .accordion::after {
   transform: all .3s;
   content: "\f107";
@@ -143,6 +145,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 @font-face {
   font-family: "coder";
   src: local("coder"), url(font.woff) format("woff");
@@ -406,8 +409,7 @@ section:nth-of-type(even) {
   background-color: hsl(205, 6%, 19%);
 }
 
-.active {
-}
+.active {}
 
 #accordionContainer {
   width: 60vw;
@@ -732,7 +734,7 @@ button:hover {
 }
 
 #buyButton1 {
-  color: #cacaca;
+  color: #cacaca !important;
   margin: 15px;
   background: #2D373E;
   box-shadow: none;
@@ -744,9 +746,11 @@ button:hover {
   font-family: Orbitron;
   box-shadow: 0px 1px 5px 3px #ffe300ad;
 }
-
+#buyButton2 span {
+  color: #cacaca !important;
+}
 #buyButton2 {
-  color: #cacaca;
+  color: #cacaca !important;
   margin: 15px;
   background: #2D373E;
   box-shadow: none;
@@ -759,7 +763,8 @@ button:hover {
   box-shadow: 0px 1px 5px 3px #ffe300ad;
 }
 
-#buyButton1:hover, #buyButton2:hover {
+#buyButton1:hover,
+#buyButton2:hover {
   transform: scale(1.1);
 }
 
@@ -785,7 +790,7 @@ button:hover {
 
 .supplyContainer .supplyRight {
   border-radius: 0px 15px 15px 0px;
-  background: #2D373E ;
+  background: #2D373E;
   color: #cacaca;
   width: 16vw;
   display: flex;
@@ -805,6 +810,7 @@ button:hover {
 
 .span2 {
   font-size: 25px;
+  text-align: center !important;
 }
 
 .quantityContainer {
@@ -944,9 +950,9 @@ button:hover {
 
 .card_content {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 170px;
   background: #3C4952;
   padding: 1rem;
@@ -1148,7 +1154,7 @@ button:hover {
   display: inline-block;
   padding: 4px 6px;
   letter-spacing: .2rem;
-  font-weight: 9  00;
+  font-weight: 9 00;
   background: rgb(248, 248, 248);
 }
 
@@ -1278,7 +1284,7 @@ button:hover {
 /* TIMELINE END */
 
 .heroHeader {
-  font-size:30px;
+  font-size: 30px;
   color: white;
   font-weight: 900;
   font-family: Orbitron;
@@ -2121,16 +2127,18 @@ a {
   #accordionContainer {
     width: 80vw !important;
   }
+
   #item3 {
     padding: 50px 15px !important;
   }
+
   .heroContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  
+
   #timelineContainer {
     height: auto;
     background: transparent;
@@ -2159,6 +2167,7 @@ a {
     background: url("./utilityMobile.png") no-repeat center bottom !important;
     background-size: cover !important;
   }
+
   #item4 {
     padding: 20px 40px !important;
   }
@@ -2221,6 +2230,7 @@ a {
     padding: 150px 40px;
     justify-content: flex-start !important;
   }
+
   .heroHeader {
     margin-bottom: 10px !important;
   }
@@ -2368,10 +2378,26 @@ a {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 391px) {
   #item3 {
     height: 550vh !important;
 
+  }
+
+  #item4 {
+    padding: 20px 10px !important;
+}
+
+  .supplyContainer .supplyRight,
+  .supplyContainer .supplyLeft {
+    width: 39vw !important;
+    font-size: 0.9rem;
+  }
+
+  .quantityContainer .quantityRight,
+  .quantityContainer .quantityLeft {
+    width: 39vw !important;
+    font-size: 0.9rem;
   }
 
   .heroSubText {
@@ -2388,7 +2414,8 @@ a {
   }
 
   #mintHeroBtn {
-    font-size: 12px !important;
+    width: 70%;
+    font-size: 23px !important;
   }
 
   #heroSubText {
@@ -2419,9 +2446,9 @@ a {
 }
 
 @media (min-width: 920px) {
-.open {
-  display: none !important;
-}
+  .open {
+    display: none !important;
+  }
 }
 
 
@@ -2466,11 +2493,13 @@ a {
   border-radius: 10px;
   box-shadow: 0px 0px 8px 5px #a89530;
 }
+
 .nftImage2 {
   width: 50%;
   max-width: 220px;
   margin: 25px;
   border: solid 2px #001050ed;
   border-radius: 10px;
-  box-shadow: 0px 0px 8px 5px #001877;;
+  box-shadow: 0px 0px 8px 5px #001877;
+  ;
 }
