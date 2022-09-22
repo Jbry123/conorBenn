@@ -930,6 +930,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
+        AccessControlAllowOrigin: "*"
       },
     });
     let price = await priceResponse.json();
@@ -1243,7 +1244,7 @@ function App() {
                 Supply
               </div>
               <div className="supplyRight">
-                {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+                {data.totalSupply || "10"} / {CONFIG.MAX_SUPPLY}
               </div>
             </div>
 
