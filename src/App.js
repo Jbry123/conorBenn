@@ -929,15 +929,14 @@ function App() {
     const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
         "Content-Type": "application/json",
-        Accept: "*",
+        Accept: "https://www.bennft.xyz",
       },
-      credentials: 'include'
     });
     let price = await priceResponse.json();
     let ethPrice = price.result.ethusd
-    let calcPrice = (250 / (ethPrice * .885) * 1000000000000000000);
+    let calcPrice = (250 / (1330 * .885) * 1000000000000000000);
     setEthPriceGBP(calcPrice);
-    let calc2price = (250 / (ethPrice * .885));
+    let calc2price = (250 / (1330 * .885));
     setCrossPrice(calc2price);
     console.log(calcPrice, "testPrice");
     console.log(ethPriceGBP);
