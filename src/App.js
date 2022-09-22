@@ -634,7 +634,7 @@ function App() {
                     {claimingNft ? "MINTING" : "Buy With Wallet"}
                   </StyledButton>
 
-                  <CrossmintPayButton disabled id="buyButton2" style={{ borderRadius: "30px", color: "#cacaca" }}
+                  <CrossmintPayButton disabled id="buyButton2" style={{ borderRadius: "30px", color: "#cacaca", opacity: ".5" }}
                   collectionTitle="MonsterBuds x LittyUp"
                   collectionDescription="Snoop has partnered with LittyUp and MonsterBuds to build positive interactions between all of our fans and across many aspects including IRL, online, gaming, and music."
                   collectionPhoto="https://gateway.pinata.cloud/ipfs/QmepxrN2HsYmQz6RqtSyPDoy2fFpA9CVBkR44aTpeRNMo4/snoop_higher_conciousness.png"
@@ -736,7 +736,7 @@ function App() {
                     {claimingNft ? "MINTING" : "Buy With Wallet"}
                   </StyledButton>
 
-                  <CrossmintPayButton id="buyButton2" disabled style={{ borderRadius: "30px" }}
+                  <CrossmintPayButton id="buyButton2" disabled style={{ borderRadius: "30px", opacity: ".5" }}
                   collectionTitle="MonsterBuds x LittyUp"
                   collectionDescription="Snoop has partnered with LittyUp and MonsterBuds to build positive interactions between all of our fans and across many aspects including IRL, online, gaming, and music."
                   collectionPhoto="https://gateway.pinata.cloud/ipfs/QmepxrN2HsYmQz6RqtSyPDoy2fFpA9CVBkR44aTpeRNMo4/snoop_higher_conciousness.png"
