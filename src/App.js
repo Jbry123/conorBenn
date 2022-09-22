@@ -22,6 +22,7 @@ import { Collapse } from 'antd';
 import axios from 'axios';
 import Web3 from "web3";
 
+
 const { Panel } = Collapse;
 
 const text = `
@@ -925,16 +926,16 @@ function App() {
     });
     const config = await configResponse.json();
     SET_CONFIG(config);
-    const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=MIG4QSH7EQ36WU9TS879FHY99QMG7ZSIEG", {
+    const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
     });
     let price = await priceResponse.json();
-    let calcPrice = (200 / (price.result.ethusd * .885) * 1000000000000000000);
+    let calcPrice = (250 / (1329 * .885) * 1000000000000000000);
     setEthPriceGBP(calcPrice);
-    let calc2price = (200 / (price.result.ethusd * .885));
+    let calc2price = (250 / (price.result.ethusd * .885));
     setCrossPrice(calc2price);
     console.log(calcPrice, "testPrice");
     console.log(ethPriceGBP);
@@ -1467,7 +1468,6 @@ function App() {
                     clientId="17502992-1cfc-4f1d-ba0c-2d9831fb4cb7"
                     mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify((mintAmount * crossPrice)), "quantity": mintAmount }}
                   />
-
 
                 </s.Container>
                 <div className="fancy" style={{ margin: "30px 25px" }}>
