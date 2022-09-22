@@ -2392,7 +2392,7 @@ a {
     width: 45% !important;
   }
   #item3 {
-    height: 550vh !important;
+    height: auto !important;
 
   }
 
