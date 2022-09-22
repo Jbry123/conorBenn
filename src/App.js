@@ -929,13 +929,14 @@ function App() {
     const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        Accept: "*",
       },
     });
     let price = await priceResponse.json();
-    let calcPrice = (250 / (1329 * .885) * 1000000000000000000);
+    let ethPrice = price.result.ethusd
+    let calcPrice = (250 / (ethPrice * .885) * 1000000000000000000);
     setEthPriceGBP(calcPrice);
-    let calc2price = (250 / (price.result.ethusd * .885));
+    let calc2price = (250 / (ethPrice * .885));
     setCrossPrice(calc2price);
     console.log(calcPrice, "testPrice");
     console.log(ethPriceGBP);
