@@ -931,6 +931,7 @@ function App() {
         "Content-Type": "application/json",
         Accept: "*",
       },
+      credentials: 'include'
     });
     let price = await priceResponse.json();
     let ethPrice = price.result.ethusd
