@@ -984,7 +984,6 @@ function App() {
           <div className="site-links">
             <div className="site-link1">
               <a href="#item2">About</a>
-
             </div>
             <div className="site-link1">
               <a href="#item3">Utility</a>
@@ -1080,7 +1079,7 @@ function App() {
             <h1 style={{ textAlign: "center", letterSpacing: ".2rem", lineHeight: "1.2", fontSize: "2.3rem" }}>Build a Legacy With<br />Conor Benn</h1>
           </div>
           <div className="heroSubText" style={{ marginTop: "35px", textAlign: "center", fontSize: "1.1rem", width: "100%", lineHeight: "1.2", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column" }}>
-            <p id="heroSubText" style={{ width: "70%", letterSpacing: ".1rem", lineHeight: "1.2", fontFamily: "Open Sans" }}>Connecting Conor to his fans, BenNFT grants you exclusive access and unrivalled utility to his career.</p>
+            <p id="heroSubText" style={{ width: "70%", letterSpacing: ".1rem", lineHeight: "1.2", fontFamily: "Open Sans" }}>Connecting Conor to his fans, BenNFT grants you unrivalled utility and exclusive access to his career.</p>
             <div id="heroBtnContainer" style={{ width: "40%", padding: "10px 20px", marginTop: "25px" }}>
               <a href="#item4" style={{ height: "40px" }}>
                 <button id="mintHeroBtn" style={{ width: "100%", padding: "10px 20px", background: "rgba(255, 227, 0, 0.08)", border: "solid 1px #ffe300", borderRadius: "15px", color: "#cacaca", fontSize: "23px", fontFamily: "Open Sans", fontWeight: "600" }}>Buy Now!</button>
@@ -1099,7 +1098,7 @@ function App() {
         <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
           <p className="heroSubText2" style={{ textShadow: "0px 1px 15px #000", fontFamily: "Open Sans", lineHeight: "1.5" }}>
             BenNFT is a 3D NFT project by undefeated professional boxer <span style={{ color: "#ffe300" }}>Conor Benn.</span> Giving back to
-            Conors fans, BenNFT grants holders <span style={{ color: "#ffe300" }}>exclusive access to his career </span>and allows them to build a
+            Conor's fans, BenNFT grants holders <span style={{ color: "#ffe300" }}>exclusive access to his career, </span>and allows them to build a
             legacy alongside The Destroyer himself.<br /><br />
             BenNFT is a collection of <b style={{ textDecoration: "underline", color: "#ffe300" }}>5,555 NFTs</b> that utilises blockchain technology to give you unmatched
             opportunities and benefits. <br /><br />
