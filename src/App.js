@@ -851,9 +851,9 @@ function App() {
       "0xc4c6ed8a22306bc3491d6f5e7a536abe2ca9e003",
       "0x35cceffd13a834128429349052da49875821318c",
       "0x10af3c0b921684a1c335ce4ec35c3deff339d1a1"];
-    let cost = ethPriceGBP;
+    let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = String((ethPriceGBP * mintAmount));
+    let totalCostWei = String((cost * mintAmount));
     let totalGasLimit = String((gasLimit * mintAmount));
 
     console.log("Cost: ", totalCostWei);
@@ -929,8 +929,8 @@ function App() {
     const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
         "Content-Type": "application/json",
-        Accept:'*',
-        'Access-Control-Allow-Origin': "*"
+        Accept:"application/json",
+        "Access-Control-Allow-Origin": "*"
          
       },
     });
@@ -1369,7 +1369,7 @@ function App() {
                     collectionDescription="Connecting Conor and his fans."
                     collectionPhoto="https://i.ibb.co/stVxNqh/unknown-7.png"
                     clientId="17502992-1cfc-4f1d-ba0c-2d9831fb4cb7"
-                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify((mintAmount * crossPrice)), "quantity": mintAmount }}
+                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify((mintAmount * .17)), "quantity": mintAmount }}
                   />
                 </s.Container>
                 <div className="fancy" style={{ margin: "30px 25px" }}>
@@ -1468,7 +1468,7 @@ function App() {
                     collectionDescription="Connecting Conor and his fans."
                     collectionPhoto="https://i.ibb.co/stVxNqh/unknown-7.png"
                     clientId="17502992-1cfc-4f1d-ba0c-2d9831fb4cb7"
-                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify((mintAmount * crossPrice)), "quantity": mintAmount }}
+                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify((mintAmount * .17)), "quantity": mintAmount }}
                   />
 
                 </s.Container>
