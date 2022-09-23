@@ -1956,7 +1956,6 @@ function App() {
     //   return;
     // }
 
-    console.log(blockchain.smartContract.methods, "helloMethods");
 
     blockchain.smartContract.methods
       //change params in mint to number of mints first, then the signature
@@ -2106,7 +2105,7 @@ function App() {
 
               </div>
             </a>
-            <a href="https://discord.com/BenNFT">
+            <a href="https://discord.com/invite/bennft">
               <div className="social-link3">
 
               </div>
