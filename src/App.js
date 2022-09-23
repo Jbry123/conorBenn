@@ -5,8 +5,6 @@ import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
-import conorVertical from "./conorVertical.webm";
-import logo from "./logo.svg";
 import boxingGloves from "./styles/boxing-gloves.png";
 import ticket from "./styles/ticket.png";
 import shake from "./styles/shake-hands.png";
@@ -19,8 +17,6 @@ import sessions from "./styles/sand-bag.png";
 import nftImage1 from "./styles/nftimage1.png";
 import nftImage2 from "./styles/nftimage2.png";
 import { Collapse } from 'antd';
-import axios from 'axios';
-import Web3 from "web3";
 
 // var myContract = new Web3.eth.Contract([...], '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe', {
 //   from: '0x1234567890123456789012345678901234567891', // default from address
