@@ -142,7 +142,7 @@ function App() {
     NFT_NAME: "BenNFT",
     SYMBOL: "BNFT",
     MAX_SUPPLY: 5555,
-    WEI_COST: ethPriceGBP,
+    WEI_COST: 174331731539377820,
     DISPLAY_COST: 0.15,
     GAS_LIMIT: 120000,
     MARKETPLACE: "opensea",
