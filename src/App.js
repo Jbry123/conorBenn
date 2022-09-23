@@ -2084,13 +2084,13 @@ function App() {
           </div>
           <div className="site-links">
             <div className="site-link1">
-              <a href="#item2">About</a>
+              <a href="#about">About</a>
             </div>
             <div className="site-link1">
-              <a href="#item3">Utility</a>
+              <a href="#utility">Utility</a>
             </div>
             <div className="site-link1">
-              <a href="#item4">Buy Now</a>
+              <a href="#buy">Buy Now</a>
             </div>
             <div className="site-link1">
               <a href="#faq">FAQ</a>
@@ -2157,16 +2157,16 @@ function App() {
           </div> */}
             <ul className="sub-menu ">
               <li>
-                <a href="#item2" title="about">About</a>
+                <a href="#about" title="about">About</a>
               </li>
               <li>
-                <a href="#item3" title="skills">Utilities</a>
+                <a href="#utility" title="skills">Utilities</a>
               </li>
               <li>
                 <a href="#faq" title="jobs">FAQ</a>
               </li>
               <li>
-                <a href="#item4" title="contact">Buy Now</a>
+                <a href="#buy" title="contact">Buy Now</a>
               </li>
               <li>
                 <a href="https://bennft.myshopify.com/" title="contact">Store</a>
@@ -2190,7 +2190,7 @@ function App() {
         </div>
       </div>
       <div id="item2">
-        <div className="heroHeader2" >
+        <div className="heroHeader2" id="about" >
           <h1 style={{ textAlign: "left", marginBottom: "1vh", fontWeight: "800", fontSize: "2.3rem", }}>What is BenNFT?</h1>
           {/* <div className="blueStripe2" style={{ backgroundPosition: "top top" }}>
 
@@ -2215,7 +2215,7 @@ function App() {
         </div>
       </div>
       <div id="item3">
-        <div className="cardgrid_container">
+        <div className="cardgrid_container" id="utility">
           <h1 className="heroHeader" style={{ textAlign: "center", fontSize: "2.3rem", margin: "50px 25px" }}>Connecting Conor To His Fans </h1>
           {/* <p className="heroSubText" style={{ textAlign: "center", fontSize: "1.2rem", margin: "17.5px 25px" }}>-Exclusive access to his career-</p> */}
           <ul className="cards">
@@ -2323,7 +2323,7 @@ function App() {
       <div id="item4">
 
 
-        <div className="heroHeader" >
+        <div className="heroHeader" id="buy" >
           {/* <s.TextTitle
                   style={{
                     textAlign: "center",
