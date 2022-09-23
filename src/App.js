@@ -22,6 +22,11 @@ import { Collapse } from 'antd';
 import axios from 'axios';
 import Web3 from "web3";
 
+// var myContract = new Web3.eth.Contract([...], '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe', {
+//   from: '0x1234567890123456789012345678901234567891', // default from address
+//   gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
+// });
+
 
 const { Panel } = Collapse;
 
@@ -929,7 +934,7 @@ function App() {
     const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
         "Content-Type": "application/json",
-        Accept: "/*/",
+        Accept: "*/*",
          
       },
     });
