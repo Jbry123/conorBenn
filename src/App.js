@@ -2353,7 +2353,7 @@ function App() {
                 Price
               </div>
               <div className="quantityRight">
-                £200
+                £250
               </div>
             </div>
             {blockchain.account === "" ||
