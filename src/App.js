@@ -928,10 +928,12 @@ function App() {
     SET_CONFIG(config);
     const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json; charset=utf-8",
         Accept:"application/json",
-        "Access-Control-Allow-Origin": "*"
-         
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Content-Length": "215"
       },
     });
     let price = await priceResponse.json();
