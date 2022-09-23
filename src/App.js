@@ -1369,7 +1369,7 @@ function App() {
                     collectionDescription="Connecting Conor and his fans."
                     collectionPhoto="https://i.ibb.co/stVxNqh/unknown-7.png"
                     clientId="17502992-1cfc-4f1d-ba0c-2d9831fb4cb7"
-                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify((mintAmount * .17)), "quantity": mintAmount }}
+                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify(mintAmount * .17), "quantity": mintAmount }}
                   />
                 </s.Container>
                 <div className="fancy" style={{ margin: "30px 25px" }}>
@@ -1468,7 +1468,7 @@ function App() {
                     collectionDescription="Connecting Conor and his fans."
                     collectionPhoto="https://i.ibb.co/stVxNqh/unknown-7.png"
                     clientId="17502992-1cfc-4f1d-ba0c-2d9831fb4cb7"
-                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify((mintAmount * .17)), "quantity": mintAmount }}
+                    mintConfig={{ "type": "erc-721", "totalPrice": JSON.stringify(mintAmount * .17), "quantity": mintAmount }}
                   />
 
                 </s.Container>
