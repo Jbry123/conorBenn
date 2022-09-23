@@ -90,7 +90,6 @@ export const connect = () => {
         dispatch(connectFailed("Something went wrong."));
       }
     } else {
-      alert("Metamask didnt work, lets try walletconnect, or you can use crossmint(buy with credit card button");
       //  Create WalletConnect Provider
       const provider = new WalletConnectProvider({
         infuraId: "4fd3dd38c4474553b33ded0ddd28a0da", // Required
