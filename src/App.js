@@ -860,16 +860,16 @@ function App() {
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
-    const x = new String((blockchain.account));
+    // const x = new String((blockchain.account));
 
-    if (usersArray.includes(x.toString()) != true) {
+    // if (usersArray.includes(x.toString()) != true) {
 
-      console.log(String(blockchain.account), "blockchain");
-      alert("you are not whitelisted, please talk to us on discord if this is a mistake");
-      setFeedback("Sorry, something went wrong please try again later.");
-      setClaimingNft(false);
-      return;
-    };
+    //   console.log(String(blockchain.account), "blockchain");
+    //   alert("you are not whitelisted, please talk to us on discord if this is a mistake");
+    //   setFeedback("Sorry, something went wrong please try again later.");
+    //   setClaimingNft(false);
+    //   return;
+    // };
 
     blockchain.smartContract.methods
       //change params in mint to number of mints first, then the signature
@@ -929,7 +929,8 @@ function App() {
     const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
         "Content-Type": "application/json",
-        Accept: "https://www.bennft.xyz",
+        Accept:'*', 
+         
       },
     });
     let price = await priceResponse.json();
