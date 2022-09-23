@@ -929,7 +929,7 @@ function App() {
     const priceResponse = await fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HXZZM4ESINEDGTYQS4Z17DMG54QCV11M45", {
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        Accept: "/*/",
          
       },
     });
