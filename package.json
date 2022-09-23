@@ -6,6 +6,8 @@
   "private": true,
   "dependencies": {
     "@crossmint/client-sdk-react-ui": "^0.2.0",
+    "@walletconnect/node": "^1.0.0",
+    "@walletconnect/qrcode-modal": "^1.8.0",
     "antd": "^4.22.8",
     "axios": "^0.27.2",
     "coingecko-api": "^1.0.10",

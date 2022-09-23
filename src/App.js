@@ -1245,7 +1245,7 @@ function App() {
                 Supply
               </div>
               <div className="supplyRight">
-                {data.totalSupply || "10"} / {CONFIG.MAX_SUPPLY}
+                {data.totalSupply || "97"} / {CONFIG.MAX_SUPPLY}
               </div>
             </div>
 
